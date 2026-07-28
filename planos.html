@@ -33,7 +33,9 @@
                     <li>✅ Alterações e Atualizações Ilimitadas</li>
                     <li>✅ Botões de WhatsApp e E-mail</li>
                 </ul>
-                <button class="btn btn-primary btn-full" onclick="abrirPix('Start', '19,90')">Ativar no Pix</button>
+                <button class="btn btn-primary btn-full" onclick="abrirPix('Start', '19,90')">
+                    ⚡ Para ativar no Pix agora mesmo: FAÇA ISTO
+                </button>
             </div>
 
             <div class="card pricing-card featured">
@@ -48,7 +50,9 @@
                     <li>✅ Chave de Gestão de Funcionários</li>
                     <li>✅ Suporte Prioritário VIP via WhatsApp</li>
                 </ul>
-                <button class="btn btn-primary btn-full" onclick="abrirPix('Pro Business', '49,90')">Ativar no Pix</button>
+                <button class="btn btn-primary btn-full" onclick="abrirPix('Pro Business', '49,90')">
+                    ⚡ Para ativar no Pix agora mesmo: FAÇA ISTO
+                </button>
             </div>
         </div>
     </section>
@@ -56,20 +60,22 @@
     <div id="pix-modal" class="modal" style="display:none;">
         <div class="modal-content card">
             <span class="close-btn" onclick="fecharPix()">&times;</span>
-            <h3>Checkout via Pix (InfinitePay)</h3>
-            <p id="plano-titulo" style="color: var(--primary); font-weight: bold; margin-top: 10px;"></p>
+            <h2 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 5px;">Checkout via Pix (InfinitePay)</h2>
+            <p id="plano-titulo" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;"></p>
             <hr class="divider">
             
-            <p>Faça o Pix da taxa no seu aplicativo do banco para a chave:</p>
+            <p style="margin-top: 15px; font-weight: 500;">Faça o Pix da taxa no seu aplicativo do banco para a chave:</p>
             
-            <div class="pix-key-box">
+            <div class="pix-key-box" style="background: var(--bg-main); padding: 15px; border-radius: 8px; border: 1px dashed var(--primary); margin: 15px 0;">
                 <span style="font-size: 0.85rem; color: var(--text-muted);">Chave Pix (E-mail):</span><br>
-                <strong id="pix-key" style="font-size: 1.1rem; color: #38ef7d;">maramwawaw@gmail.com</strong>
+                <strong id="pix-key" style="font-size: 1.2rem; color: #38ef7d; word-break: break-all;">maramwawaw@gmail.com</strong>
             </div>
 
-            <p><small>Após realizar o pagamento via InfinitePay, clique no botão abaixo para enviar o comprovante no WhatsApp e ter seu acesso liberado na hora!</small></p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 15px 0;">
+                Após realizar o pagamento via InfinitePay, clique no botão abaixo para enviar o comprovante no WhatsApp e ter seu acesso liberado na hora!
+            </p>
             
-            <a id="btn-wa-comprovante" href="#" target="_blank" class="btn btn-primary btn-full" style="background-color: #25D366;">
+            <a id="btn-wa-comprovante" href="#" target="_blank" class="btn btn-primary btn-full" style="background-color: #25D366; font-size: 1.05rem; padding: 14px;">
                 📱 Enviar Comprovante via WhatsApp
             </a>
         </div>
