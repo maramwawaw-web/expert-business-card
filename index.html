@@ -6,6 +6,68 @@
     <title>Expert Business Card | Proteja Seu Patrimônio Digital</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+        /* Estilos dos Cards Modelos da Home */
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .public-card-pink {
+            background: rgba(20, 10, 25, 0.95);
+            border: 1px solid #ff007f;
+            border-radius: 28px;
+            padding: 30px 20px;
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.25);
+        }
+        .avatar-pink {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #2a081a;
+            padding: 4px;
+            border: 2px solid #ff66c4;
+            box-shadow: 0 0 15px rgba(255, 102, 196, 0.4);
+        }
+        .badge-pink {
+            background: rgba(255, 0, 127, 0.15);
+            color: #ff66c4;
+            border: 1px solid rgba(255, 102, 196, 0.3);
+        }
+        .btn-pink {
+            background: linear-gradient(135deg, #ff007f, #ff66c4);
+            color: #fff;
+        }
+
+        .public-card-blue {
+            background: rgba(10, 20, 35, 0.95);
+            border: 1px solid #00d2ff;
+            border-radius: 28px;
+            padding: 30px 20px;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.25);
+        }
+        .avatar-blue {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #081d33;
+            padding: 4px;
+            border: 2px solid #00d2ff;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+        .badge-blue {
+            background: rgba(0, 210, 255, 0.15);
+            color: #00d2ff;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+        }
+        .btn-blue {
+            background: linear-gradient(135deg, #0052d4, #00d2ff);
+            color: #fff;
+        }
+    </style>
 </head>
 <body class="app-mode">
 
@@ -15,115 +77,17 @@
                 <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
             </a>
             <nav class="desktop-nav">
-                <a href="#impactos">Impactos do Risco</a>
-                <a href="#solucao">A Solução EBC</a>
+                <a href="#modelos">Modelos</a>
+                <a href="#impactos">Por Que o EBC?</a>
                 <a href="planos.html">Planos</a>
             </nav>
             <div class="header-actions">
                 <a href="login.html" class="btn btn-ghost">Entrar</a>
-                <a href="cadastro.html" class="btn btn-primary-glow">Proteger Meu Negócio</a>
+                <a href="cadastro.html" class="btn btn-primary-glow">Criar Meu Card</a>
             </div>
         </div>
     </header>
 
     <main class="app-content">
 
-        <section class="hero-card">
-            <div class="app-chip">🛡️ Proteção Permanente do Seu Histórico e Clientes</div>
-            <h1 class="hero-title">
-                Um Cliente Vale Ouro: <br>
-                <span class="gradient-text">Nunca Mais Perca Acesso ao que Você Construiu na Web</span>
-            </h1>
-            <p class="hero-desc">
-                Perder o acesso aos seus canais web gera danos irreversíveis à sua marca: interrupção de vendas, perda de clientes cativos, quebra de parcerias estratégicas e perda de anos de histórico. O EBC centraliza a sua identidade em um ponto permanente e indestrutível.
-            </p>
-            <div class="hero-action-group">
-                <a href="cadastro.html" class="btn btn-app-primary">Proteger Meus Contatos Agora</a>
-                <a href="planos.html" class="btn btn-app-secondary">Ver Planos & Ativação Pix</a>
-            </div>
-        </section>
-
-        <section id="impactos" class="app-section">
-            <div class="section-header">
-                <h2>O Custo de Ficar Inacessível na Web</h2>
-                <p>Veja os riscos reais que ameaçam a continuidade e o faturamento do seu negócio</p>
-            </div>
-
-            <div class="app-grid-2">
-                <div class="app-card border-danger">
-                    <div class="card-status-badge status-danger">⚠️ Impactos Profissionais & Financeiros</div>
-                    <ul class="app-list">
-                        <li><strong>Prejuízo Comercial Direto:</strong> Interrupção imediata de vendas e perda definitiva de clientes ativos.</li>
-                        <li><strong>Fim de Parcerias Estratégicas:</strong> Contratos, indicações e acordos firmados são rompidos por falta de contato.</li>
-                        <li><strong>Anos de Trabalho Perdidos:</strong> Impossibilidade de recuperar histórico de portfólios, links e comunicações acumuladas.</li>
-                    </ul>
-                </div>
-
-                <div class="app-card border-danger">
-                    <div class="card-status-badge status-danger">🔒 Danos à Imagem & Segurança</div>
-                    <ul class="app-list">
-                        <li><strong>Vulnerabilidade a Golpes:</strong> Links e canais desatualizados podem ser clonados para aplicar fraudes em seu nome.</li>
-                        <li><strong>Abalo Moral e de Marca:</strong> Dificuldade em comprovar a identidade oficial da sua empresa e perda do controle da sua marca.</li>
-                        <li><strong>Dependência de Terceiros:</strong> Plataformas externas que alteram regras ou bloqueiam acessos sem aviso prévio.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="solucao" class="app-section">
-            <div class="section-header">
-                <h2>A Solução: Um Hub Digital Permanente</h2>
-                <p>Garanta que seus clientes sempre encontrem você, não importa o que aconteça com seus sites ou sistemas</p>
-            </div>
-
-            <div class="app-grid-3">
-                <div class="widget-card">
-                    <div class="widget-icon">🔗</div>
-                    <h3>Ponto Único e Definitivo</h3>
-                    <p>Um link permanente e QR Code exclusivo que concentram toda a sua presença comercial em um só lugar.</p>
-                </div>
-                <div class="widget-card">
-                    <div class="widget-icon">⚡</div>
-                    <h3>Atualização Instantânea</h3>
-                    <p>Trocou de telefone, e-mail ou endereço? Atualize no painel em 5 segundos e reative todos os seus clientes.</p>
-                </div>
-                <div class="widget-card">
-                    <div class="widget-icon">🛡️</div>
-                    <h3>Sovereignty da Marca</h3>
-                    <p>Mantenha o controle total dos seus dados de contato sem depender das oscilações de serviços de terceiros.</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item active">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Início</span>
-        </a>
-        <a href="planos.html" class="nav-item">
-            <span class="nav-icon">💎</span>
-            <span class="nav-label">Planos</span>
-        </a>
-        <a href="cadastro.html" class="nav-item">
-            <span class="nav-icon">➕</span>
-            <span class="nav-label">Criar</span>
-        </a>
-        <a href="login.html" class="nav-item">
-            <span class="nav-icon">🔑</span>
-            <span class="nav-label">Entrar</span>
-        </a>
-    </div>
-
-    <footer class="app-footer">
-        <p><strong>Expert Business Card</strong> - Todos os direitos reservados © 2026</p>
-        <p class="contact-highlight">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
-        <p class="credits">Desenvolvido por <span>MCWM</span></p>
-    </footer>
-
-    <script src="app.js"></script>
-</body>
-</html>
-               
-               
+        <section class="hero-card text-center">
