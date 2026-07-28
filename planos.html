@@ -2,103 +2,148 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planos & Preços | Expert Business Card</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Planos & Assinaturas | Expert Business Card</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/plans.css">
 </head>
-<body>
+<body class="app-mode">
 
-    <nav class="navbar">
-        <a href="index.html" class="logo"><span class="highlight">EBC</span> Expert Business Card</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="login.html" class="btn btn-outline">Entrar</a>
-            <a href="cadastro.html" class="btn btn-primary">Criar Conta</a>
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-ghost">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary-glow">Criar Card</a>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="section">
-        <div class="badge">💎 Invista na sua Imagem Profissional</div>
-        <h1>Escolha o Plano Ideal para seu Negócio</h1>
-        <p class="subtitle">Ativação imediata via Pix sem mensalidades abusivas.</p>
+    <main class="app-content">
 
-        <div class="grid-cards pricing-grid">
-            <div class="card pricing-card">
-                <h3>Start</h3>
-                <div class="price">R$ 19,90<span>/único</span></div>
-                <p>Ideal para profissionais autônomos e liberais.</p>
-                <ul>
-                    <li>✅ 1 Cartão Digital Interativo</li>
-                    <li>✅ QR Code Individual Exclusivo</li>
-                    <li>✅ Alterações e Atualizações Ilimitadas</li>
-                    <li>✅ Botões de WhatsApp e E-mail</li>
+        <div class="section-header text-center">
+            <div class="app-chip">💎 Invista no Seu Maior Ativo</div>
+            <h2>Escolha o Plano Ideal para Proteção do Seu Negócio</h2>
+            <p>Ativação instantânea via Pix. Sem pegadinhas nem mensalidades surpresa.</p>
+        </div>
+
+        <div class="plans-container">
+
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Start Digital</h3>
+                    <p class="plan-desc">Para profissionais autônomos e liberais.</p>
+                </div>
+                <div class="plan-price">
+                    <span class="currency">R$</span>
+                    <span class="amount">19,90</span>
+                    <span class="period">/taxa única</span>
+                </div>
+                <ul class="plan-features">
+                    <li>✅ 1 Business Card Digital Interativo</li>
+                    <li>✅ QR Code Exclusivo de Alta Resolução</li>
+                    <li>✅ Edição e Atualizações Ilimitadas</li>
+                    <li>✅ Botões de Ação Direta (WhatsApp e E-mail)</li>
+                    <li>✅ Proteção Contra Perda de Contato</li>
                 </ul>
-                <button class="btn btn-primary btn-full" onclick="abrirPix('Start', '19,90')">
+                <button class="btn btn-plan" onclick="selecionarPlano('Start', '19.90')">
                     ⚡ Para ativar no Pix agora mesmo: FAÇA ISTO
                 </button>
             </div>
 
-            <div class="card pricing-card featured">
-                <div class="card-badge">Mais Recomendado</div>
-                <h3>Pro Business</h3>
-                <div class="price">R$ 49,90<span>/ano</span></div>
-                <p>Para empresas, equipes e vendedores experientes.</p>
-                <ul>
+            <div class="plan-card featured">
+                <div class="plan-badge">Mais Recomendado</div>
+                <div class="plan-header">
+                    <h3>Pro Business</h3>
+                    <p class="plan-desc">Para empresas, equipes e negócios em expansão.</p>
+                </div>
+                <div class="plan-price">
+                    <span class="currency">R$</span>
+                    <span class="amount">49,90</span>
+                    <span class="period">/ano</span>
+                </div>
+                <ul class="plan-features">
                     <li>✅ Tudo do Plano Start</li>
-                    <li>✅ Links de Redes Sociais Completas</li>
-                    <li>✅ Mapa e Geolocalização de Endereço</li>
-                    <li>✅ Chave de Gestão de Funcionários</li>
+                    <li>✅ Redes Sociais Completas (Instagram, LinkedIn, etc.)</li>
+                    <li>✅ Localização GPS & Mapa Integrado</li>
                     <li>✅ Suporte Prioritário VIP via WhatsApp</li>
+                    <li>✅ Chave de Troca / Transfêrencia de Titularidade</li>
                 </ul>
-                <button class="btn btn-primary btn-full" onclick="abrirPix('Pro Business', '49,90')">
+                <button class="btn btn-plan btn-featured" onclick="selecionarPlano('Pro Business', '49.90')">
                     ⚡ Para ativar no Pix agora mesmo: FAÇA ISTO
                 </button>
             </div>
+
         </div>
+
     </section>
 
-    <div id="pix-modal" class="modal" style="display:none;">
-        <div class="modal-content card">
-            <span class="close-btn" onclick="fecharPix()">&times;</span>
-            <h2 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 5px;">Checkout via Pix (InfinitePay)</h2>
-            <p id="plano-titulo" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;"></p>
-            <hr class="divider">
+    </main>
+
+    <div id="checkout-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <button class="modal-close" onclick="fecharModal()">&times;</button>
             
-            <p style="margin-top: 15px; font-weight: 500;">Faça o Pix da taxa no seu aplicativo do banco para a chave:</p>
-            
-            <div class="pix-key-box" style="background: var(--bg-main); padding: 15px; border-radius: 8px; border: 1px dashed var(--primary); margin: 15px 0;">
-                <span style="font-size: 0.85rem; color: var(--text-muted);">Chave Pix (E-mail):</span><br>
-                <strong id="pix-key" style="font-size: 1.2rem; color: #38ef7d; word-break: break-all;">maramwawaw@gmail.com</strong>
+            <div class="modal-header text-center">
+                <div class="app-chip">Checkout Seguro InfinitePay</div>
+                <h3 id="modal-plano-titulo">Ativação de Plano</h3>
             </div>
 
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 15px 0;">
-                Após realizar o pagamento via InfinitePay, clique no botão abaixo para enviar o comprovante no WhatsApp e ter seu acesso liberado na hora!
-            </p>
-            
-            <a id="btn-wa-comprovante" href="#" target="_blank" class="btn btn-primary btn-full" style="background-color: #25D366; font-size: 1.05rem; padding: 14px;">
-                📱 Enviar Comprovante via WhatsApp
-            </a>
+            <div class="modal-body">
+                <p class="step-instruction">
+                    Para concluir e ativar agora mesmo, faça o Pix da taxa no aplicativo do seu banco:
+                </p>
+
+                <div class="pix-box">
+                    <span class="pix-label">Chave Pix (E-mail):</span>
+                    <div class="pix-key-wrapper">
+                        <input type="text" id="pix-key-input" value="maramwawaw@gmail.com" readonly>
+                        <button class="btn btn-copy" onclick="copiarChavePix()">Copiar</button>
+                    </div>
+                </div>
+
+                <div class="payment-alert">
+                    <p>⚡ <strong>Após realizar o pagamento via InfinitePay:</strong></p>
+                    <p>Clique no botão abaixo para enviar o comprovante pelo WhatsApp e ter seu acesso liberado na hora!</p>
+                </div>
+
+                <button class="btn btn-whatsapp-confirm" onclick="enviarComprovanteWhatsApp()">
+                    📱 Enviar Comprovante via WhatsApp
+                </button>
+            </div>
         </div>
     </div>
 
-    <footer>
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Início</span>
+        </a>
+        <a href="planos.html" class="nav-item active">
+            <span class="nav-icon">💎</span>
+            <span class="nav-label">Planos</span>
+        </a>
+        <a href="cadastro.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+            <span class="nav-label">Criar</span>
+        </a>
+        <a href="login.html" class="nav-item">
+            <span class="nav-icon">🔑</span>
+            <span class="nav-label">Entrar</span>
+        </a>
+    </div>
+
+    <footer class="app-footer">
         <p><strong>Expert Business Card</strong> - Todos os direitos reservados © 2026</p>
-        <p class="contact-info">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
-        <p class="credits">Desenvolvido por MCWM</p>
+        <p class="contact-highlight">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
+        <p class="credits">Desenvolvido por <span>MCWM</span></p>
     </footer>
 
-    <script src="js/app.js"></script>
-    <script>
-        function abrirPix(plano, valor) {
-            document.getElementById('plano-titulo').innerText = "Plano " + plano + " - R$ " + valor;
-            const waLink = `https://wa.me/5542999157587?text=Olá!%20Fiz%20o%20Pix%20do%20EBC%20no%20valor%20de%20R$%20${valor}%20referente%20ao%20Plano%20${plano}.%20Segue%20o%20comprovante:`;
-            document.getElementById('btn-wa-comprovante').href = waLink;
-            document.getElementById('pix-modal').style.display = 'flex';
-        }
-
-        function fecharPix() {
-            document.getElementById('pix-modal').style.display = 'none';
-        }
-    </script>
+    <script src="app.js"></script>
+    <script src="js/plans.js"></script>
+    <script src="js/pix.js"></script>
 </body>
 </html>
