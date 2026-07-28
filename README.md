@@ -8,7 +8,7 @@ Plataforma SaaS para centralização, preservação e gestão permanente de cont
 - SVG Vetorial Integrado
 - Vercel Deployment Ready
 
-## 📦 Como Publicar no GitHub + Vercel
-1. Envie estes arquivos descompactados para a raiz do seu repositório GitHub.
-2. Importe o projeto no painel do Vercel.
-3. O deploy será feito automaticamente com rotas limpas via `vercel.json`.
+## 📦  GitHub + Vercel
+1.Repositório GitHub.
+2. projeto no painel do Vercel.
+3. O deploy automaticamente com rotas limpas via `vercel.json`.
