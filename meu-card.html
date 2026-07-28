@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cartão Digital | Expert Business Card</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="public-card-body">
+
+    <div class="public-card-wrapper">
+        <div class="public-card">
+            
+            <div class="card-avatar-box">
+                <div class="avatar-circle" id="card-avatar-initials">EB</div>
+            </div>
+
+            <div class="card-identity text-center">
+                <h1 id="public-nome">Nome do Profissional</h1>
+                <p id="public-cargo" class="public-title">Cargo / Profissão</p>
+                <div class="ebc-verified-badge">✓ Perfil Protegido pelo EBC</div>
+            </div>
+
+            <p id="public-bio" class="public-bio text-center">
+                Carregando informações do perfil...
+            </p>
+
+            <div class="card-actions-list">
+                <a id="btn-public-wa" href="#" target="_blank" class="card-btn btn-whatsapp">
+                    <span>📱 WhatsApp Direto</span>
+                </a>
+
+                <a id="btn-public-email" href="#" class="card-btn btn-email">
+                    <span>✉️ Enviar E-mail</span>
+                </a>
+
+                <a id="btn-public-insta" href="#" target="_blank" class="card-btn btn-instagram" style="display:none;">
+                    <span>📸 Instagram</span>
+                </a>
+
+                <a id="btn-public-linkedin" href="#" target="_blank" class="card-btn btn-linkedin" style="display:none;">
+                    <span>💼 LinkedIn</span>
+                </a>
+
+                <button onclick="baixarVCard()" class="card-btn btn-vcard">
+                    🎴 Salvar Contato na Agenda
+                </button>
+            </div>
+
+            <div class="public-card-footer text-center">
+                <a href="index.html" class="ebc-mini-brand">
+                    <img src="logo-ebc.svg" alt="EBC Logo">
+                </a>
+                <p><small>Crie seu cartão digital unificado em expert-business-card.vercel.app</small></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/card.js"></script>
+</body>
+</html>

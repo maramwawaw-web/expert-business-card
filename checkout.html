@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Finalizar Ativação | EBC Checkout</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/plans.css">
+</head>
+<body class="app-mode">
+
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <a href="planos.html" class="btn btn-ghost">← Voltar para Planos</a>
+        </div>
+    </header>
+
+    <main class="app-content">
+        <div class="checkout-wrapper">
+            <div class="app-card border-success">
+                <div class="section-header text-center">
+                    <div class="app-chip">Checkout via InfinitePay</div>
+                    <h2>Instruções de Pagamento Pix</h2>
+                    <p id="checkout-plan-info">Carregando detalhes do plano...</p>
+                </div>
+
+                <div class="pix-box">
+                    <span class="pix-label">Chave Pix Ofícial (E-mail):</span>
+                    <div class="pix-key-wrapper">
+                        <input type="text" id="pix-key-input" value="maramwawaw@gmail.com" readonly>
+                        <button class="btn btn-copy" onclick="copiarChavePix()">Copiar Chave</button>
+                    </div>
+                </div>
+
+                <div class="payment-instructions">
+                    <ol class="app-list">
+                        <li>1. Abra o aplicativo do seu banco ou instituição financeira.</li>
+                        <li>2. Selecione a opção <strong>Pix > Pagar via Chave E-mail</strong>.</li>
+                        <li>3. Cole a chave <code>maramwawaw@gmail.com</code> e confirme o valor referente ao seu plano.</li>
+                        <li>4. Clique no botão abaixo para enviar o comprovante diretamente ao suporte via WhatsApp.</li>
+                    </ol>
+                </div>
+
+                <button class="btn btn-whatsapp-confirm btn-full" onclick="enviarComprovanteWhatsApp()">
+                    📱 Enviar Comprovante via WhatsApp
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/pix.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const plano = urlParams.get('plano') || 'Pro Business';
+            const valor = urlParams.get('valor') || '49.90';
+            
+            document.getElementById('checkout-plan-info').innerText = `Plano Selecionado: ${plano} - R$ ${valor.replace('.', ',')}`;
+            localStorage.setItem('ebc_selected_plan', JSON.stringify({ plano, valor }));
+        });
+    </script>
+</body>
+</html>

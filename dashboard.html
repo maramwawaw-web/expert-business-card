@@ -2,55 +2,128 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | EBC</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard | Expert Business Card</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
-<body>
+<body class="app-mode">
 
-    <nav class="navbar">
-        <div class="logo"><span class="highlight">EBC</span> Dashboard</div>
-        <div class="nav-links">
-            <a href="card.html" id="btn-ver-card" class="btn btn-outline" target="_blank">Ver Meu Card Público</a>
-            <button onclick="logout()" class="btn btn-danger">Sair</button>
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <div class="header-actions">
+                <span id="user-display-name" class="user-chip">👋 Olá, Usuário</span>
+                <button onclick="realizarLogout()" class="btn btn-ghost">Sair</button>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="container dashboard-container">
+    <main class="app-content">
         <div class="dashboard-grid">
-            <div class="card panel">
-                <h3>Seus Dados do Cartão</h3>
-                <form id="form-dashboard">
-                    <label>ID Único (UUID):</label>
-                    <input type="text" id="dash-uuid" disabled readonly>
+            
+            <section class="dashboard-main">
+                <div class="app-card">
+                    <div class="card-header-flex">
+                        <div>
+                            <div class="app-chip">⚡ Atualização em Tempo Real</div>
+                            <h2>Gerenciar Seu Card</h2>
+                        </div>
+                        <a id="btn-ver-card-publico" href="#" target="_blank" class="btn btn-primary-glow btn-sm">
+                            👁️ Ver Card Ao Vivo
+                        </a>
+                    </div>
 
-                    <label>Nome / Empresa:</label>
-                    <input type="text" id="dash-nome">
+                    <form id="form-dashboard" class="app-form" onsubmit="salvarDadosCard(event)">
+                        
+                        <div id="dash-alert" class="form-alert" style="display: none;"></div>
 
-                    <label>E-mail de Contato:</label>
-                    <input type="email" id="dash-email">
+                        <div class="form-group">
+                            <label for="card-nome">Nome do Profissional / Empresa</label>
+                            <input type="text" id="card-nome" placeholder="Ex: Marcos Silva" required>
+                        </div>
 
-                    <label>WhatsApp:</label>
-                    <input type="text" id="dash-whatsapp">
+                        <div class="form-group">
+                            <label for="card-cargo">Cargo ou Título</label>
+                            <input type="text" id="card-cargo" placeholder="Ex: Diretor Comercial">
+                        </div>
 
-                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-                </form>
-            </div>
+                        <div class="form-group">
+                            <label for="card-whatsapp">WhatsApp Principal (com DDD)</label>
+                            <input type="tel" id="card-whatsapp" placeholder="42999157587" required>
+                        </div>
 
-            <div class="card panel text-center">
-                <h3>Seu QR Code Exclusivo</h3>
-                <p>Escaneie ou baixe para compartilhar instantaneamente:</p>
-                <div id="qrcode-container" class="qr-box"></div>
-                <br>
-                <small id="dash-card-url"></small>
-            </div>
+                        <div class="form-group">
+                            <label for="card-email">E-mail Profissional</label>
+                            <input type="email" id="card-email" placeholder="contato@empresa.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="card-instagram">Instagram (usuário sem @)</label>
+                            <input type="text" id="card-instagram" placeholder="seu.perfil">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="card-linkedin">LinkedIn (link completo ou usuário)</label>
+                            <input type="text" id="card-linkedin" placeholder="in/seu-perfil">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="card-bio">Mini Biografia / Descrição do Negócio</label>
+                            <textarea id="card-bio" rows="3" placeholder="Descreva brevemente sua empresa ou serviços..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-app-primary btn-full">
+                            💾 Salvar Alterações
+                        </button>
+
+                    </form>
+                </div>
+            </section>
+
+            <aside class="dashboard-sidebar">
+                <div class="app-card text-center">
+                    <h3>Seu QR Code Exclusivo</h3>
+                    <p class="text-muted text-sm">Imprima ou exiba na tela para compartilhar instantaneamente.</p>
+                    
+                    <div class="qr-code-box">
+                        <img id="qr-code-img" src="" alt="Carregando QR Code...">
+                    </div>
+
+                    <div class="input-wrapper margin-v">
+                        <input type="text" id="link-card-input" readonly>
+                        <button class="btn btn-copy" onclick="copiarLinkCard()">Copiar</button>
+                    </div>
+
+                    <div class="card-status-info">
+                        <span class="status-indicator active">● Status: Protegido & Ativo</span>
+                    </div>
+                </div>
+            </aside>
+
         </div>
+    </main>
+
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Início</span>
+        </a>
+        <a href="dashboard.html" class="nav-item active">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Painel</span>
+        </a>
+        <a id="nav-ver-card" href="#" class="nav-item">
+            <span class="nav-icon">🎴</span>
+            <span class="nav-label">Meu Card</span>
+        </a>
     </div>
 
-    <script src="js/app.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', carregarDashboard);
-    </script>
+    <script src="app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

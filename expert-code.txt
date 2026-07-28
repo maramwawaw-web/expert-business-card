@@ -1,14 +1,36 @@
 expert-business-card/
+
 │
-├── index.html          # Landing Page da Startup
-├── login.html          # Tela de Login
-├── cadastro.html       # Cadastro com geração de UUID simulado
-├── dashboard.html      # Painel do Usuário
-├── planos.html         # Tabela de Planos
-├── card.html           # Página pública do Business Card
+├── index.html                 ← Landing Page
+├── planos.html                ← Planos
+├── checkout.html              ← Pagamento PIX
+├── cadastro.html              ← Criar Conta
+├── login.html                 ← Entrar
+├── dashboard.html             ← Painel
+├── meu-card.html              ← Editar Business Card
+├── compartilhar.html          ← QR Code
+├── analytics.html             ← Estatísticas
+├── configuracoes.html         ← Configurações
+├── suporte.html               ← Atendimento
 │
 ├── css/
-│   └── style.css       # Estilo global moderno/dark modo SaaS
+│      style.css
+│      dashboard.css
+│      forms.css
+│      plans.css
 │
-└── js/
-    └── app.js          # Lógica de navegação, simulação de Auth e QR Code
+├── js/
+│      app.js
+│      auth.js
+│      dashboard.js
+│      pix.js
+│      qr.js
+│      analytics.js
+│
+├── assets/
+│      logo.svg
+│      favicon.png
+│      hero.jpg
+│      icons/
+│
+└── README.md

@@ -1,0 +1,170 @@
+/* Layout do Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 20px;
+}
+
+@media (max-width: 850px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.user-chip {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary-bright);
+}
+
+.textarea-input {
+    resize: vertical;
+}
+
+.qr-code-box {
+    background: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    display: inline-block;
+    margin: 16px 0;
+}
+
+.qr-code-box img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+.status-indicator.active {
+    color: var(--primary-bright);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Visual do Cartão Público */
+.public-card-body {
+    background: radial-gradient(circle at top, #102d42, #07151f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 12px;
+}
+
+.public-card-wrapper {
+    max-width: 420px;
+    width: 100%;
+}
+
+.public-card {
+    background: rgba(13, 34, 50, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 30px 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.card-avatar-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #18a558, #38ef7d);
+    color: #07151f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    box-shadow: 0 8px 20px var(--primary-glow);
+}
+
+.public-identity h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.public-title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.ebc-verified-badge {
+    display: inline-block;
+    background: rgba(24, 165, 88, 0.15);
+    color: var(--primary-bright);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.public-bio {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.card-actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp { background: #25D366; color: #fff; }
+.btn-email { background: #1e3a50; color: #fff; border: 1px solid var(--border); }
+.btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
+.btn-linkedin { background: #0077b5; color: #fff; }
+.btn-vcard { background: var(--primary); color: #fff; width: 100%; }
+
+.public-card-footer {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.ebc-mini-brand img {
+    height: 28px;
+    opacity: 0.8;
+}
+
+.ebc-mini-brand img:hover { opacity: 1; }

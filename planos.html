@@ -1,149 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Planos & Assinaturas | Expert Business Card</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/plans.css">
-</head>
-<body class="app-mode">
+START
 
-    <header class="app-header">
-        <div class="header-container">
-            <a href="index.html" class="app-brand">
-                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
-            </a>
-            <div class="header-actions">
-                <a href="login.html" class="btn btn-ghost">Entrar</a>
-                <a href="cadastro.html" class="btn btn-primary-glow">Criar Card</a>
-            </div>
-        </div>
-    </header>
+R$19,90
 
-    <main class="app-content">
+Pagamento único
 
-        <div class="section-header text-center">
-            <div class="app-chip">💎 Invista no Seu Maior Ativo</div>
-            <h2>Escolha o Plano Ideal para Proteção do Seu Negócio</h2>
-            <p>Ativação instantânea via Pix. Sem pegadinhas nem mensalidades surpresa.</p>
-        </div>
+────────────
 
-        <div class="plans-container">
+✔ Cartão Digital
 
-            <div class="plan-card">
-                <div class="plan-header">
-                    <h3>Start Digital</h3>
-                    <p class="plan-desc">Para profissionais autônomos e liberais.</p>
-                </div>
-                <div class="plan-price">
-                    <span class="currency">R$</span>
-                    <span class="amount">19,90</span>
-                    <span class="period">/taxa única</span>
-                </div>
-                <ul class="plan-features">
-                    <li>✅ 1 Business Card Digital Interativo</li>
-                    <li>✅ QR Code Exclusivo de Alta Resolução</li>
-                    <li>✅ Edição e Atualizações Ilimitadas</li>
-                    <li>✅ Botões de Ação Direta (WhatsApp e E-mail)</li>
-                    <li>✅ Proteção Contra Perda de Contato</li>
-                </ul>
-                <button class="btn btn-plan" onclick="selecionarPlano('Start', '19.90')">
-                    ⚡ Para ativar no Pix agora mesmo: FAÇA ISTO
-                </button>
-            </div>
+✔ QR Code
 
-            <div class="plan-card featured">
-                <div class="plan-badge">Mais Recomendado</div>
-                <div class="plan-header">
-                    <h3>Pro Business</h3>
-                    <p class="plan-desc">Para empresas, equipes e negócios em expansão.</p>
-                </div>
-                <div class="plan-price">
-                    <span class="currency">R$</span>
-                    <span class="amount">49,90</span>
-                    <span class="period">/ano</span>
-                </div>
-                <ul class="plan-features">
-                    <li>✅ Tudo do Plano Start</li>
-                    <li>✅ Redes Sociais Completas (Instagram, LinkedIn, etc.)</li>
-                    <li>✅ Localização GPS & Mapa Integrado</li>
-                    <li>✅ Suporte Prioritário VIP via WhatsApp</li>
-                    <li>✅ Chave de Troca / Transfêrencia de Titularidade</li>
-                </ul>
-                <button class="btn btn-plan btn-featured" onclick="selecionarPlano('Pro Business', '49.90')">
-                    ⚡ Para ativar no Pix agora mesmo: FAÇA ISTO
-                </button>
-            </div>
+✔ WhatsApp
 
-        </div>
+✔ Email
 
-    </section>
+✔ Atualizações
 
-    </main>
+[ COMEÇAR ]
+PRO BUSINESS
 
-    <div id="checkout-modal" class="modal-overlay" style="display: none;">
-        <div class="modal-card">
-            <button class="modal-close" onclick="fecharModal()">&times;</button>
-            
-            <div class="modal-header text-center">
-                <div class="app-chip">Checkout Seguro InfinitePay</div>
-                <h3 id="modal-plano-titulo">Ativação de Plano</h3>
-            </div>
+★★★★★
 
-            <div class="modal-body">
-                <p class="step-instruction">
-                    Para concluir e ativar agora mesmo, faça o Pix da taxa no aplicativo do seu banco:
-                </p>
+R$49,90
 
-                <div class="pix-box">
-                    <span class="pix-label">Chave Pix (E-mail):</span>
-                    <div class="pix-key-wrapper">
-                        <input type="text" id="pix-key-input" value="maramwawaw@gmail.com" readonly>
-                        <button class="btn btn-copy" onclick="copiarChavePix()">Copiar</button>
-                    </div>
-                </div>
+ANUAL
 
-                <div class="payment-alert">
-                    <p>⚡ <strong>Após realizar o pagamento via InfinitePay:</strong></p>
-                    <p>Clique no botão abaixo para enviar o comprovante pelo WhatsApp e ter seu acesso liberado na hora!</p>
-                </div>
+────────────
 
-                <button class="btn btn-whatsapp-confirm" onclick="enviarComprovanteWhatsApp()">
-                    📱 Enviar Comprovante via WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
+Tudo do Start
 
-    <div class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Início</span>
-        </a>
-        <a href="planos.html" class="nav-item active">
-            <span class="nav-icon">💎</span>
-            <span class="nav-label">Planos</span>
-        </a>
-        <a href="cadastro.html" class="nav-item">
-            <span class="nav-icon">➕</span>
-            <span class="nav-label">Criar</span>
-        </a>
-        <a href="login.html" class="nav-item">
-            <span class="nav-icon">🔑</span>
-            <span class="nav-label">Entrar</span>
-        </a>
-    </div>
+Instagram
 
-    <footer class="app-footer">
-        <p><strong>Expert Business Card</strong> - Todos os direitos reservados © 2026</p>
-        <p class="contact-highlight">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
-        <p class="credits">Desenvolvido por <span>MCWM</span></p>
-    </footer>
+Facebook
 
-    <script src="app.js"></script>
-    <script src="js/plans.js"></script>
-    <script src="js/pix.js"></script>
-</body>
-</html>
+Google Maps
+
+Analytics
+
+Equipe
+
+VIP
+
+[ ASSINAR ]

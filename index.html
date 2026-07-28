@@ -2,122 +2,79 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Expert Business Card | O Ativo do Seu Negócio</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Business Card | O Cartão Inteligente</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="app-mode">
+<body>
 
-    <header class="app-header">
-        <div class="header-container">
-            <a href="index.html" class="app-brand">
-                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
-            </a>
-            <nav class="desktop-nav">
-                <a href="#solucao">Por que o EBC?</a>
-                <a href="#recursos">Recursos</a>
-                <a href="planos.html">Planos</a>
-            </nav>
-            <div class="header-actions">
-                <a href="login.html" class="btn btn-ghost">Entrar</a>
-                <a href="cadastro.html" class="btn btn-primary-glow">Criar Card</a>
-            </div>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><span class="highlight">EBC</span> Expert Business Card</a>
+        <div class="nav-links">
+            <a href="#solucao">Por que o EBC?</a>
+            <a href="#recursos">Recursos</a>
+            <a href="planos.html">Planos</a>
+            <a href="login.html" class="btn btn-outline">Entrar</a>
+            <a href="cadastro.html" class="btn btn-primary">Criar meu Card</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">🚀 O Fim dos Cartões Impressos</div>
+        <h1>Nunca Mais Perca um Cliente por <br><span class="gradient-text">Trocar de Número ou Funcionário</span></h1>
+        <p class="subtitle">Seu funcionário mudou? Seu WhatsApp alterou? Não jogue dinheiro fora reimprimindo materiais. Atualize tudo em 5 segundos no painel EBC e mantenha seus clientes conectados a você.</p>
+        
+        <div class="hero-btns">
+            <a href="cadastro.html" class="btn btn-primary btn-lg">Criar Meu Business Card</a>
+            <a href="planos.html" class="btn btn-secondary btn-lg">Ver Planos e Valores</a>
         </div>
     </header>
 
-    <main class="app-content">
-
-        <section class="hero-card">
-            <div class="app-chip">🚀 Proteção Permanente do Seu Histórico</div>
-            <h1 class="hero-title">Nunca Mais Perca Clientes por <br><span class="gradient-text">Trocar de Número, E-mail ou Site</span></h1>
-            <p class="hero-desc">
-                Cada cliente retido vale milhões. Quando seu site cai, o e-mail bloqueia ou o número altera, você perde acessos valiosos. O EBC centraliza e protege a sua presença digital num cartão permanente, sempre atualizado e com QR Code inteligente.
-            </p>
-            <div class="hero-action-group">
-                <a href="cadastro.html" class="btn btn-app-primary">Começar Agora</a>
-                <a href="planos.html" class="btn btn-app-secondary">Ver Planos & Ativação Pix</a>
+    <section id="solucao" class="section bg-alt">
+        <h2>A Dor do Material Impresso vs. A Solução EBC</h2>
+        <div class="grid-cards">
+            <div class="card problem-card">
+                <h3>❌ Cartão de Papel / Sites Velhos</h3>
+                <p>• Mudou de telefone? Perdeu o investimento e o cliente.</p>
+                <p>• O funcionário saiu? Leva os contatos do seu negócio embora.</p>
+                <p>• Imprimir 1.000 cartões custa caro e a maioria vai para o lixo.</p>
             </div>
-        </section>
-
-        <section id="solucao" class="app-section">
-            <div class="section-header">
-                <h2>A Verdadeira Dor da Perda de Contato</h2>
-                <p>Veja como o EBC recupera e protege o histórico do seu negócio</p>
+            <div class="card solution-card">
+                <h3>✅ Com o Expert Business Card</h3>
+                <p>• Edite seus dados em tempo real no dashboard sem gastar 1 centavo.</p>
+                <p>• O cliente sempre acessa o seu contato certo via QR Code ou Link.</p>
+                <p>• Controle total da empresa na sua mão e centralizado.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="app-grid-2">
-                <div class="app-card border-danger">
-                    <div class="card-status-badge status-danger">❌ O Risco do Modelo Antigo</div>
-                    <ul class="app-list">
-                        <li><strong>Sites velhos e domínios perdidos:</strong> O site cai, o e-mail expira e o cliente desiste.</li>
-                        <li><strong>Mudança de WhatsApp/Telefone:</strong> Seus contatos antigos tentam falar com você e encontram linha morta.</li>
-                        <li><strong>Parcerias e indicações mortas:</strong> Materiais e links antigos deixam de funcionar.</li>
-                    </ul>
-                </div>
-
-                <div class="app-card border-success">
-                    <div class="card-status-badge status-success">✅ O Controle com o EBC</div>
-                    <ul class="app-list">
-                        <li><strong>Ponto Único e Permanente:</strong> Um único link/QR Code que nunca muda na mão do seu cliente.</li>
-                        <li><strong>Gestão Instantânea:</strong> Alterou número ou e-mail? Mude no painel e atualize todos em tempo real.</li>
-                        <li><strong>Recuperação do Seu Histórico:</strong> Proteja o investimento de anos em contatos e relacionamentos.</li>
-                    </ul>
-                </div>
+    <section id="recursos" class="section">
+        <h2>Tudo o que sua Empresa Precisa</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="icon">📲</div>
+                <h3>QR Code Inteligente</h3>
+                <p>Imprima apenas 1 QR Code na sua mesa ou balcão. Ele sempre apontará para as suas informações atualizadas.</p>
             </div>
-        </section>
-
-        <section id="recursos" class="app-section">
-            <div class="section-header">
-                <h2>Recursos Nativos do EBC</h2>
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Atualização Instantânea</h3>
+                <p>Trocou de WhatsApp? Altere no painel e no mesmo segundo todos os clientes verão o novo número.</p>
             </div>
-            
-            <div class="app-grid-3">
-                <div class="widget-card">
-                    <div class="widget-icon">🔗</div>
-                    <h3>Hub de Canais</h3>
-                    <p>Reúna WhatsApp, E-mail, Instagram e Mapa num só local otimizado.</p>
-                </div>
-                <div class="widget-card">
-                    <div class="widget-icon">📱</div>
-                    <h3>QR Code Próprio</h3>
-                    <p>Imprima um único QR Code definitivo na sua mesa, fachada ou embalagens.</p>
-                </div>
-                <div class="widget-card">
-                    <div class="widget-icon">⚡</div>
-                    <h3>Edição ao Vivo</h3>
-                    <p>Mude telefones e endereços a qualquer momento sem gastar nada.</p>
-                </div>
+            <div class="card">
+                <div class="icon">💼</div>
+                <h3>Gestão de Equipe</h3>
+                <p>Ideal para empresas com vendedores. Transfira a titularidade do cartão quando um colaborador for substituído.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <div class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item active">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Início</span>
-        </a>
-        <a href="planos.html" class="nav-item">
-            <span class="nav-icon">💎</span>
-            <span class="nav-label">Planos</span>
-        </a>
-        <a href="cadastro.html" class="nav-item">
-            <span class="nav-icon">➕</span>
-            <span class="nav-label">Criar</span>
-        </a>
-        <a href="login.html" class="nav-item">
-            <span class="nav-icon">🔑</span>
-            <span class="nav-label">Entrar</span>
-        </a>
-    </div>
-
-    <footer class="app-footer">
+    <footer>
         <p><strong>Expert Business Card</strong> - Todos os direitos reservados © 2026</p>
-        <p class="contact-highlight">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
-        <p class="credits">Desenvolvido por <span>MCWM</span></p>
+        <p class="contact-info">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
+        <p class="credits">Desenvolvido por MCWM</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
