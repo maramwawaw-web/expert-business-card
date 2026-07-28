@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contato na Veia | Dashboard de Indicadores EBC</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="app-mode">
+
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <div class="header-actions">
+                <a href="dashboard.html" class="btn btn-ghost">← Voltar ao Painel</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-content">
+
+        <div class="section-header text-center">
+            <div class="app-chip">🚀 Alcance Global sem Fronteiras</div>
+            <h2>Contato na Veia 🔥</h2>
+            <p>Mande pro seu melhor amigo na ilha em que ele estiver: WhatsApp, Insta, Facebook... Tá valendo!</p>
+        </div>
+
+        <div class="app-grid-3 margin-v">
+            <div class="widget-card">
+                <div class="widget-icon">👁️</div>
+                <h3>Visualizações Totais</h3>
+                <div class="kpi-number" id="metric-views">1.248</div>
+                <p class="text-sm text-muted">+18% esta semana</p>
+            </div>
+
+            <div class="widget-card">
+                <div class="widget-icon">📲</div>
+                <h3>Disparos & Shares</h3>
+                <div class="kpi-number" id="metric-shares">432</div>
+                <p class="text-sm text-muted">WhatsApp, Insta & Face</p>
+            </div>
+
+            <div class="widget-card">
+                <div class="widget-icon">🏝️</div>
+                <h3>Alcance em Ilhas / Locais</h3>
+                <div class="kpi-number" id="metric-reach">14 Cidades / Ilhas</div>
+                <p class="text-sm text-muted">Conexão direta na veia</p>
+            </div>
+        </div>
+
+        <section class="app-section">
+            <div class="app-card">
+                <h3>Compartilhamento Rápido (Disparo Direto)</h3>
+                <p class="text-muted text-sm margin-bottom-sm">Envie em 1 clique para qualquer rede ou canal de contato:</p>
+
+                <div class="card-actions-list">
+                    <button class="card-btn btn-whatsapp" onclick="dispararContato('wa')">
+                        <span>💬 Mandar no WhatsApp</span>
+                    </button>
+                    <button class="card-btn btn-instagram" onclick="dispararContato('insta')">
+                        <span>📸 Compartilhar no Instagram</span>
+                    </button>
+                    <button class="card-btn btn-linkedin" onclick="dispararContato('face')">
+                        <span>📘 Compartilhar no Facebook</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Início</span>
+        </a>
+        <a href="contato-na-veia.html" class="nav-item active">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Métricas</span>
+        </a>
+        <a href="dashboard.html" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Painel</span>
+        </a>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function dispararContato(canal) {
+            const linkCard = window.location.origin + '/meu-card.html';
+            const texto = encodeURIComponent(`Acesse meu cartão digital oficial EBC (Contato na Veia!): ${linkCard}`);
+            
+            if (canal === 'wa') {
+                window.open(`https://wa.me/?text=${texto}`, '_blank');
+            } else if (canal === 'face') {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(linkCard)}`, '_blank');
+            } else {
+                navigator.clipboard.writeText(linkCard);
+                alert('Link do seu EBC copiado! Cole na bio ou direct do Instagram.');
+            }
+        }
+    </script>
+</body>
+</html>
