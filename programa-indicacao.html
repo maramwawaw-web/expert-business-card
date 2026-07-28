@@ -1,207 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Programa de Indicação | Expert Business Card</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <style>
-        .surf-card {
-            background: linear-gradient(135deg, rgba(0, 82, 212, 0.2), rgba(0, 210, 255, 0.1));
-            border: 1px solid #00d2ff;
-            border-radius: 24px;
-            padding: 24px;
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .channel-btn-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .btn-social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.88rem;
-            text-decoration: none;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-social:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-wa { background: #25D366; }
-        .btn-fb { background: #1877F2; }
-        .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .btn-lk { background: #0A66C2; }
-        .btn-yt { background: #FF0000; }
-
-        .reward-badge {
-            background: rgba(56, 239, 125, 0.15);
-            color: var(--primary-bright);
-            border: 1px solid var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Programa de Indicação | Expert Business Card</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f7fb;margin:0;color:#222}
+header{background:#0052d4;color:#fff;padding:18px;text-align:center}
+main{max-width:1000px;margin:auto;padding:24px}
+.hero{background:linear-gradient(135deg,#0052d4,#00d2ff);color:#fff;padding:30px;border-radius:20px}
+.badge{display:inline-block;background:#38ef7d;color:#003;padding:8px 16px;border-radius:20px;font-weight:bold}
+.card{background:#fff;padding:20px;border-radius:16px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;color:#fff;background:#0052d4;margin:6px}
+input{width:75%;padding:10px} button{padding:10px}
+.stat{font-size:32px;font-weight:bold;color:#0052d4}
+</style>
 </head>
-<body class="app-mode">
+<body>
+<header><h1>Programa de Indicação - Expert Business Card</h1></header>
+<main>
+<section class="hero">
+<span class="badge">💰 Ganhe R$ 2,00 por indicação efetivada</span>
+<h2>Indique novos clientes e receba sua comissão.</h2>
+<p>Você recebe <b>R$ 2,00</b> para cada cliente que utilizar seu link, concluir a contratação e realizar o pagamento.</p>
+<p><b>Importante:</b> a comissão é paga apenas uma vez, na contratação inicial. Não há pagamento sobre mensalidades.</p>
+</section>
 
-    <header class="app-header">
-        <div class="header-container">
-            <a href="index.html" class="app-brand">
-                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
-            </a>
-            <div class="header-actions">
-                <a href="dashboard.html" class="btn btn-ghost">← Voltar ao Painel</a>
-            </div>
-        </div>
-    </header>
+<div class="card">
+<h2>Como participar</h2>
+<ol>
+<li>Crie gratuitamente sua conta no Expert Business Card.</li>
+<li>Acesse seu Dashboard.</li>
+<li>Receba automaticamente seu link exclusivo de indicação.</li>
+<li>Compartilhe com amigos, clientes e parceiros.</li>
+<li>Quando a contratação for concluída e paga, você recebe R$ 2,00.</li>
+</ol>
+<p>
+<a class="btn" href="cadastro.html">Criar Conta</a>
+<a class="btn" href="login.html">Entrar</a>
+<a class="btn" href="dashboard.html">Meu Dashboard</a>
+</p>
+</div>
 
-    <main class="app-content">
+<div class="card">
+<h2>Seu Link de Indicação</h2>
+<input id="referral-link" readonly value="https://expert-business-card.vercel.app/cadastro.html?ref=demo">
+<button onclick="copiar()">Copiar</button>
+</div>
 
-        <div class="surf-card">
-            <span class="reward-badge">🌊 A Onda é Surfar Nesta Web Top</span>
-            <h1 class="hero-title" style="font-size: 1.8rem;">Programa de Indicação EBC</h1>
-            <p class="hero-desc" style="margin-bottom: 0;">
-                Envia pro teu melhor amigo na ilha em que ele estiver! Não importa a rede social ou onde ele esteja no mundo: o seu contato chega na veia.
-            </p>
-        </div>
+<div class="card">
+<h2>Compartilhar</h2>
+<p>
+<button onclick="share('wa')">WhatsApp</button>
+<button onclick="share('fb')">Facebook</button>
+<button onclick="share('lk')">LinkedIn</button>
+</p>
+</div>
 
-        <section class="app-section">
-            <div class="app-card">
-                <h3>🚀 Compartilhamento em 1 Clique</h3>
-                <p class="text-muted text-sm">Escolha a rede preferida e dispare seu link único de indicação para os amigos:</p>
+<div class="card">
+<h2>Meu Painel</h2>
+<div class="grid">
+<div><div class="stat">28</div>Cliques</div>
+<div><div class="stat">5</div>Contratações</div>
+<div><div class="stat">R$ 10,00</div>Comissões</div>
+</div>
+</div>
 
-                <div class="channel-btn-grid">
-                    <button onclick="compartilharEm('wa')" class="btn-social btn-wa">
-                        📱 Whats
-                    </button>
-                    <button onclick="compartilharEm('fb')" class="btn-social btn-fb">
-                        📘 Face
-                    </button>
-                    <button onclick="compartilharEm('ig')" class="btn-social btn-ig">
-                        📸 Insta
-                    </button>
-                    <button onclick="compartilharEm('lk')" class="btn-social btn-lk">
-                        💼 LinkedIn
-                    </button>
-                    <button onclick="compartilharEm('yt')" class="btn-social btn-yt">
-                        ▶️ YouTube
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="app-section">
-            <div class="app-card text-center">
-                <h3>Seu Link de Indicador Exclusivo</h3>
-                <p class="text-muted text-sm margin-bottom-sm">Copie e cole na bio do Insta, no canal do YouTube ou no direct do seu amigo:</p>
-
-                <div class="input-wrapper margin-v">
-                    <input type="text" id="referral-link" value="https://expert-business-card.vercel.app/cadastro.html?ref=seu_id" readonly>
-                    <button class="btn btn-copy" onclick="copiarLinkIndicacao()">Copiar</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="app-section">
-            <div class="app-card">
-                <h3>📊 Painel de Alcance das Indicações</h3>
-                <div class="app-grid-3 margin-v">
-                    <div class="widget-card text-center">
-                        <div class="widget-icon">🏝️</div>
-                        <h3>Amigos Impactados</h3>
-                        <div class="kpi-number" id="ind-cliques">28</div>
-                        <p class="text-sm text-muted">Acessos diretos</p>
-                    </div>
-
-                    <div class="widget-card text-center">
-                        <div class="widget-icon">⚡</div>
-                        <h3>EBCs Ativados</h3>
-                        <div class="kpi-number" id="ind-cadastros">5</div>
-                        <p class="text-sm text-muted">Novos membros</p>
-                    </div>
-
-                    <div class="widget-card text-center">
-                        <div class="widget-icon">🔥</div>
-                        <h3>Rede Ativa</h3>
-                        <div class="kpi-number" id="ind-status">100%</div>
-                        <p class="text-sm text-muted">Conexão na veia</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Início</span>
-        </a>
-        <a href="programa-indicacao.html" class="nav-item active">
-            <span class="nav-icon">🚀</span>
-            <span class="nav-label">Indicar</span>
-        </a>
-        <a href="dashboard.html" class="nav-item">
-            <span class="nav-icon">⚙️</span>
-            <span class="nav-label">Painel</span>
-        </a>
-    </div>
-
-    <script>
-        function obterLink() {
-            const sessao = JSON.parse(localStorage.getItem('ebc_sessao_ativa'));
-            const refId = sessao ? sessao.ebc_id : 'demo';
-            return `https://expert-business-card.vercel.app/cadastro.html?ref=${refId}`;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('referral-link').value = obterLink();
-        });
-
-        function copiarLinkIndicacao() {
-            const input = document.getElementById('referral-link');
-            input.select();
-            navigator.clipboard.writeText(input.value);
-            alert(' Link de indicação copiado! Envie para o seu amigo em qualquer ilha ou rede.');
-        }
-
-        function compartilharEm(rede) {
-            const link = encodeURIComponent(obterLink());
-            const msg = encodeURIComponent("A onda é surfar nesta web top! Crie o seu Expert Business Card permanente aqui: ");
-
-            if (rede === 'wa') {
-                window.open(`https://wa.me/?text=${msg}${link}`, '_blank');
-            } else if (rede === 'fb') {
-                window.open(`https://www.facebook.com/sharer/sharer.php?u=${link}`, '_blank');
-            } else if (rede === 'lk') {
-                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${link}`, '_blank');
-            } else {
-                navigator.clipboard.writeText(obterLink());
-                alert(`Link copiado! Abra o ${rede === 'ig' ? 'Instagram' : 'YouTube'} e cole para o seu amigo.`);
-            }
-        }
-    </script>
-    <script src="app.js"></script>
+<div class="card">
+<h2>Regras</h2>
+<ul>
+<li>Comissão de R$ 2,00 por contratação efetivada e paga.</li>
+<li>Pagamento único por cliente indicado.</li>
+<li>Mensalidades não geram comissão.</li>
+<li>As indicações ficam registradas no Dashboard.</li>
+</ul>
+</div>
+</main>
+<script>
+function obterLink(){
+ const s=JSON.parse(localStorage.getItem('ebc_sessao_ativa')||'null');
+ return 'https://expert-business-card.vercel.app/cadastro.html?ref='+(s?s.ebc_id:'demo');
+}
+document.getElementById('referral-link').value=obterLink();
+function copiar(){
+ navigator.clipboard.writeText(document.getElementById('referral-link').value);
+ alert('Link copiado!');
+}
+function share(r){
+ const l=encodeURIComponent(obterLink());
+ const m=encodeURIComponent('Conheça o Expert Business Card: ');
+ if(r==='wa') window.open('https://wa.me/?text='+m+l);
+ else if(r==='fb') window.open('https://www.facebook.com/sharer/sharer.php?u='+l);
+ else if(r==='lk') window.open('https://www.linkedin.com/sharing/share-offsite/?url='+l);
+}
+</script>
 </body>
 </html>
+
