@@ -1,0 +1,14 @@
+expert-business-card/
+│
+├── index.html          # Landing Page da Startup
+├── login.html          # Tela de Login
+├── cadastro.html       # Cadastro com geração de UUID simulado
+├── dashboard.html      # Painel do Usuário
+├── planos.html         # Tabela de Planos
+├── card.html           # Página pública do Business Card
+│
+├── css/
+│   └── style.css       # Estilo global moderno/dark modo SaaS
+│
+└── js/
+    └── app.js          # Lógica de navegação, simulação de Auth e QR Code

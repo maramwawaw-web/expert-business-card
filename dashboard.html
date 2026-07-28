@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EBC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><span class="highlight">EBC</span> Dashboard</div>
+        <div class="nav-links">
+            <a href="card.html" id="btn-ver-card" class="btn btn-outline" target="_blank">Ver Meu Card Público</a>
+            <button onclick="logout()" class="btn btn-danger">Sair</button>
+        </div>
+    </nav>
+
+    <div class="container dashboard-container">
+        <div class="dashboard-grid">
+            <div class="card panel">
+                <h3>Seus Dados do Cartão</h3>
+                <form id="form-dashboard">
+                    <label>ID Único (UUID):</label>
+                    <input type="text" id="dash-uuid" disabled readonly>
+
+                    <label>Nome / Empresa:</label>
+                    <input type="text" id="dash-nome">
+
+                    <label>E-mail de Contato:</label>
+                    <input type="email" id="dash-email">
+
+                    <label>WhatsApp:</label>
+                    <input type="text" id="dash-whatsapp">
+
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </form>
+            </div>
+
+            <div class="card panel text-center">
+                <h3>Seu QR Code Exclusivo</h3>
+                <p>Escaneie ou baixe para compartilhar instantaneamente:</p>
+                <div id="qrcode-container" class="qr-box"></div>
+                <br>
+                <small id="dash-card-url"></small>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', carregarDashboard);
+    </script>
+</body>
+</html>

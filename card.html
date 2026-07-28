@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card | EBC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="card-page">
+
+    <div class="business-card-mobile">
+        <div class="avatar">👤</div>
+        <h2 id="card-nome">Seu Nome</h2>
+        <p class="subtitle" id="card-sub">Expert Business Card</p>
+
+        <div class="card-links">
+            <a id="link-wa" href="#" target="_blank" class="card-btn wa">📱 WhatsApp</a>
+            <a id="link-email" href="#" class="card-btn mail">✉️ E-mail</a>
+        </div>
+
+        <div class="qr-section">
+            <p><small>Escaneie este cartão:</small></p>
+            <div id="public-qr"></div>
+        </div>
+        
+        <div class="card-footer-ebc">
+            <p>Powered by <strong>EBC</strong></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', carregarCardPublico);
+    </script>
+</body>
+</html>
