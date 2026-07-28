@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos | Expert Business Card</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo"><span class="highlight">EBC</span> Business Card</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html" class="btn btn-outline">Entrar</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="badge">💎 Invista no seu Networking</div>
+        <h1>Escolha o Plano Ideal para seu Negócio</h1>
+        <p class="subtitle">Ativação imediata via Pix sem burocracia.</p>
+
+        <div class="grid-cards pricing-grid">
+            <div class="card pricing-card">
+                <h3>Start</h3>
+                <div class="price">R$ 19,90<span>/único</span></div>
+                <p>Para profissionais autônomos.</p>
+                <ul>
+                    <li>✅ 1 Cartão Digital</li>
+                    <li>✅ QR Code Exclusivo</li>
+                    <li>✅ Atualizações Ilimitadas</li>
+                    <li>✅ Links de WhatsApp e E-mail</li>
+                </ul>
+                <button class="btn btn-primary btn-full" onclick="abrirPix('Start - R$ 19,90')">Assinar no Pix</button>
+            </div>
+
+            <div class="card pricing-card featured">
+                <div class="card-badge">Mais Popular</div>
+                <h3>Pro Business</h3>
+                <div class="price">R$ 49,90<span>/ano</span></div>
+                <p>Para empresas e vendedores experientes.</p>
+                <ul>
+                    <li>✅ Tudo do Plano Start</li>
+                    <li>✅ Redes Sociais Completa</li>
+                    <li>✅ Mapa & Geolocalização</li>
+                    <li>✅ Chave de Gestão de Funcionário</li>
+                    <li>✅ Suporte Prioritário VIP</li>
+                </ul>
+                <button class="btn btn-primary btn-full" onclick="abrirPix('Pro Business - R$ 49,90')">Assinar no Pix</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="pix-modal" class="modal" style="display:none;">
+        <div class="modal-content card">
+            <span class="close-btn" onclick="fecharPix()">&times;</span>
+            <h3>Pagamento via Pix (InfinitePay)</h3>
+            <p id="plano-selecionado">Plano selecionado</p>
+            <hr class="divider">
+            <p>Chave Pix E-mail:</p>
+            <div class="pix-key-box">
+                <strong id="pix-key">maramwawaw@gmail.com</strong>
+            </div>
+            <p><small>Após realizar o Pix na InfinitePay, envie o comprovante para nosso WhatsApp para ativação instantânea.</small></p>
+            <a href="https://wa.me/5542999157587?text=Olá!%20Fiz%20o%20Pix%20do%20EBC" target="_blank" class="btn btn-primary btn-full">Enviar Comprovante via WhatsApp</a>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Expert Business Card</strong> - Todos os direitos reservados © 2026</p>
+        <p class="contact-info">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
+        <p class="credits">Desenvolvido por MCWM</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

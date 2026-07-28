@@ -70,4 +70,13 @@ function carregarCardPublico() {
 function logout() {
     localStorage.removeItem('ebc_user');
     window.location.href = 'index.html';
+}// Função para abrir modal do Pix
+function abrirPix(nomePlano) {
+    document.getElementById('plano-selecionado').innerText = "Plano: " + nomePlano;
+    document.getElementById('pix-modal').style.display = 'flex';
+}
+
+// Função para fechar modal do Pix
+function fecharPix() {
+    document.getElementById('pix-modal').style.display = 'none';
 }
