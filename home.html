@@ -1,46 +1,310 @@
-────────────────────────────────
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Expert Business Card | Proteja Seu Patrimônio Digital</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+        /* Estilos dos Cards Modelos da Home */
+        .preview-grid {
+            display: grid;
+            grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .public-card-pink {
+            background: rgba(20, 10, 25, 0.95);
+            border: 1px solid #ff007f;
+            border-radius: 28px;
+            padding: 30px 20px;
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.25);
+        }
+        .avatar-pink {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #2a081a;
+            padding: 4px;
+            border: 2px solid #ff66c4;
+            box-shadow: 0 0 15px rgba(255, 102, 196, 0.4);
+        }
+        .badge-pink {
+            background: rgba(255, 0, 127, 0.15);
+            color: #ff66c4;
+            border: 1px solid rgba(255, 102, 196, 0.3);
+        }
+        .btn-pink {
+            background: linear-gradient(135deg, #ff007f, #ff66c4);
+            color: #fff;
+        }
 
-             EBC
+        .public-card-blue {
+            background: rgba(10, 20, 35, 0.95);
+            border: 1px solid #00d2ff;
+            border-radius: 28px;
+            padding: 30px 20px;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.25);
+        }
+        .avatar-blue {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #081d33;
+            padding: 4px;
+            border: 2px solid #00d2ff;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+        .badge-blue {
+            background: rgba(0, 210, 255, 0.15);
+            color: #00d2ff;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+        }
+        .btn-blue {
+            background: linear-gradient(135deg, #0052d4, #00d2ff);
+            color: #fff;
+        }
 
-Expert Business Card
+        /* Destaque para a Seção de Indicação */
+        .referral-card {
+            background: linear-gradient(135deg, rgba(20, 30, 48, 0.95), rgba(36, 59, 85, 0.95));
+            border: 2px solid #00e676;
+            border-radius: 28px;
+            padding: 40px 24px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 230, 118, 0.2);
+            margin-top: 40px;
+        }
+        .referral-badge {
+            background: rgba(0, 230, 118, 0.15);
+            color: #00e676;
+            border: 1px solid rgba(0, 230, 118, 0.4);
+            font-weight: bold;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        .referral-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00e676;
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body class="app-mode">
 
-Seu endereço digital permanente
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <nav class="desktop-nav">
+                <a href="#modelos">Modelos</a>
+                <a href="#impactos">Impactos do Risco</a>
+                <a href="#solucao">A Solução EBC</a>
+                <a href="#indicacao">Programa de Indicação</a>
+                <a href="planos.html">Planos</a>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-ghost">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary-glow">Proteger Meu Negócio</a>
+            </div>
+        </div>
+    </header>
 
-Nunca mais perca clientes
-porque seus contatos mudaram.
+    <main class="app-content">
 
-[ CRIAR MEU BUSINESS CARD ]
+        <section class="hero-card">
+            <div class="app-chip">🛡️ Proteção Permanente do Seu Histórico e Clientes</div>
+            <h1 class="hero-title">
+                Um Cliente Vale Ouro: <br>
+                <span class="gradient-text">Nunca Mais Perca Acesso ao que Você Construiu na Web</span>
+            </h1>
+            <p class="hero-desc">
+                Perder o acesso aos seus canais web gera danos irreversíveis à sua marca: interrupção de vendas, perda de clientes cativos, quebra de parcerias estratégicas e perda de anos de histórico. O EBC centraliza a sua identidade em um ponto permanente e indestrutível.
+            </p>
+            <div class="hero-action-group">
+                <a href="cadastro.html" class="btn btn-app-primary">Proteger Meus Contatos Agora</a>
+                <a href="planos.html" class="btn btn-app-secondary">Ver Planos & Ativação Pix</a>
+            </div>
+        </section>
 
-──────────────
+        <section id="modelos" class="app-section">
+            <div class="section-header text-center">
+                <div class="app-chip">✨ Cartões Modelo em Ação</div>
+                <h2>Veja Como Fica o Seu Perfil Digital</h2>
+                <p>Personalização completa para qualquer área ou segmento profissional</p>
+            </div>
 
-★★★★★
+            <div class="preview-grid">
+                <div class="public-card-pink">
+                    <div class="card-avatar-box">
+                        <svg class="avatar-pink" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="48" fill="#3a0d25"/>
+                            <path d="M25 45C25 28 35 15 50 15C65 15 75 28 75 45C75 58 72 70 70 75C65 65 65 50 65 50C65 50 58 55 50 55C42 55 35 50 35 50C35 50 35 65 30 75C28 70 25 58 25 45Z" fill="#ff66c4"/>
+                            <circle cx="50" cy="42" r="18" fill="#f8fafc"/>
+                            <circle cx="43" cy="40" r="2" fill="#07151f"/>
+                            <circle cx="57" cy="40" r="2" fill="#07151f"/>
+                            <path d="M44 48Q50 53 56 48" stroke="#07151f" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M28 85C28 70 38 65 50 65C62 65 72 70 72 85V90H28V85Z" fill="#ff007f"/>
+                        </svg>
+                    </div>
 
-Mais de
+                    <div class="card-identity text-center">
+                        <h3 style="color: #ff66c4; font-size: 1.4rem; margin-bottom: 4px;">HELOISA</h3>
+                        <p class="public-title">Especialista em Conexões & Atendimentos</p>
+                        <div class="ebc-verified-badge badge-pink">✓ Perfil Verificado EBC</div>
+                    </div>
 
-10.000
+                    <p class="public-bio text-center">
+                        Conectando negócios e garantindo atendimento rápido e direto no WhatsApp.
+                    </p>
 
-Business Cards ativos
+                    <div class="card-actions-list">
+                        <a href="https://wa.me/5542999157587" target="_blank" class="card-btn btn-pink">
+                            📱 WhatsApp: +55 42 99915-7587
+                        </a>
+                        <a href="mailto:maramwawaw@gmail.com" class="card-btn btn-email">
+                            ✉️ maramwawaw@gmail.com
+                        </a>
+                    </div>
+                </div>
 
-──────────────
+                <div class="public-card-blue">
+                    <div class="card-avatar-box">
+                        <svg class="avatar-blue" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="48" fill="#0f2b48"/>
+                            <path d="M30 38C30 25 40 20 50 20C60 20 70 25 70 38H30Z" fill="#0052d4"/>
+                            <path d="M25 38H75L80 42H20L25 38Z" fill="#00d2ff"/>
+                            <circle cx="50" cy="48" r="16" fill="#f8fafc"/>
+                            <circle cx="44" cy="46" r="2" fill="#07151f"/>
+                            <circle cx="56" cy="46" r="2" fill="#07151f"/>
+                            <path d="M45 54Q50 58 55 54" stroke="#07151f" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M28 88C28 72 38 68 50 68C62 68 72 72 72 88V90H28V88Z" fill="#0052d4"/>
+                        </svg>
+                    </div>
 
-✔ QR Code
+                    <div class="card-identity text-center">
+                        <h3 style="color: #00d2ff; font-size: 1.4rem; margin-bottom: 4px;">JOÃO MECÂNICO</h3>
+                        <p class="public-title">Manutenção Automotiva & Diagnóstico</p>
+                        <div class="ebc-verified-badge badge-blue">✓ Perfil Verificado EBC</div>
+                    </div>
 
-✔ WhatsApp
+                    <p class="public-bio text-center">
+                        Mecânica geral, revisão preventiva e socorro rápido. Mantenha meu contato sempre salvo!
+                    </p>
 
-✔ Google Maps
+                    <div class="card-actions-list">
+                        <a href="https://wa.me/5542999157587" target="_blank" class="card-btn btn-blue">
+                            📱 Chamar no WhatsApp
+                        </a>
+                        <a href="mailto:maramwawaw@gmail.com" class="card-btn btn-email">
+                            ✉️ Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-✔ Instagram
+        <section id="indicacao" class="app-section">
+            <div class="referral-card">
+                <div class="referral-badge">💰 Indique e Ganhe</div>
+                <h2>Programa de Afiliados EBC</h2>
+                <p>Compartilhe a segurança da presença digital com sua rede e receba diretamente por cada nova adesão.</p>
+                <div class="referral-price">R$ 3,00</div>
+                <p><strong>Por indicação realizada e devidamente paga!</strong></p>
+                <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.85;">
+                    Sem limites de indicação. Indique amigos, clientes e parceiros para começar a faturar hoje mesmo.
+                </p>
+                <div style="margin-top: 24px;">
+                    <a href="cadastro.html" class="btn btn-app-primary">Quero Meu Link de Indicação</a>
+                </div>
+            </div>
+        </section>
 
-✔ Facebook
+        <section id="impactos" class="app-section">
+            <div class="section-header">
+                <h2>O Custo de Ficar Inacessível na Web</h2>
+                <p>Veja os riscos reais que ameaçam a continuidade e o faturamento do seu negócio</p>
+            </div>
 
-✔ LinkedIn
+            <div class="app-grid-2">
+                <div class="app-card border-danger">
+                    <div class="card-status-badge status-danger">⚠️ Impactos Profissionais & Financeiros</div>
+                    <ul class="app-list">
+                        <li><strong>Prejuízo Comercial Direto:</strong> Interrupção imediata de vendas e perda definitiva de clientes ativos.</li>
+                        <li><strong>Fim de Parcerias Estratégicas:</strong> Contratos, indicações e acordos firmados são rompidos por falta de contato.</li>
+                        <li><strong>Anos de Trabalho Perdidos:</strong> Impossibilidade de recuperar histórico de portfólios, links e comunicações acumuladas.</li>
+                    </ul>
+                </div>
 
-✔ Atualizações ilimitadas
+                <div class="app-card border-danger">
+                    <div class="card-status-badge status-danger">🔒 Danos à Imagem & Segurança</div>
+                    <ul class="app-list">
+                        <li><strong>Vulnerabilidade a Golpes:</strong> Links e canais desatualizados podem ser clonados para aplicar fraudes em seu nome.</li>
+                        <li><strong>Abalo Moral e de Marca:</strong> Dificuldade em comprovar a identidade oficial da sua empresa e perda do controle da sua marca.</li>
+                        <li><strong>Dependência de Terceiros:</strong> Plataformas externas que alteram regras ou bloqueiam acessos sem aviso prévio.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-──────────────
+        <section id="solucao" class="app-section">
+            <div class="section-header">
+                <h2>A Solução: Um Hub Digital Permanente</h2>
+                <p>Garanta que seus clientes sempre encontrem você, não importa o que aconteça com seus sites ou sistemas</p>
+            </div>
 
-Ver Demonstração
+            <div class="app-grid-3">
+                <div class="widget-card">
+                    <div class="widget-icon">🔗</div>
+                    <h3>Ponto Único e Definitivo</h3>
+                    <p>Um link permanente e QR Code exclusivo que concentram toda a sua presença comercial em um só lugar.</p>
+                </div>
+                <div class="widget-card">
+                    <div class="widget-icon">⚡</div>
+                    <h3>Atualização Instantânea</h3>
+                    <p>Trocou de telefone, e-mail ou endereço? Atualize no painel em 5 segundos e reative todos os seus clientes.</p>
+                </div>
+                <div class="widget-card">
+                    <div class="widget-icon">💸</div>
+                    <h3>Renda Extra por Indicações</h3>
+                    <p>Ganhe R$ 3,00 por cada indicação confirmada e paga. Monitore seus lucros no seu painel exclusivo.</p>
+                </div>
+            </div>
+        </section>
 
-Escolher Plano
+    </main>
 
-──────────────────────────────
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Início</span>
+        </a>
+        <a href="planos.html" class="nav-item">
+            <span class="nav-icon">💎</span>
+            <span class="nav-label">Planos</span>
+        </a>
+        <a href="cadastro.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+            <span class="nav-label">Criar</span>
+        </a>
+        <a href="login.html" class="nav-item">
+            <span class="nav-icon">🔑</span>
+            <span class="nav-label">Entrar</span>
+        </a>
+    </div>
+
+    <footer class="app-footer">
+        <p><strong>Expert Business Card</strong> - Todos os direitos reservados © 2026</p>
+        <p class="contact-highlight">Contato: maramwawaw@gmail.com | WhatsApp: +55 42 99915-7587</p>
+        <p class="credits">Desenvolvido por <span>MCWM</span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
