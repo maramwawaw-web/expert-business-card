@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Ajustes específicos para a grade de cartões */
+        /* Grade e estilo dos cartões de demonstração */
         .cards-grid-wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -99,9 +99,7 @@
             transition: opacity 0.2s;
         }
 
-        .custom-card .btn-card-action:hover {
-            opacity: 0.9;
-        }
+        .custom-card .btn-card-action:hover { opacity: 0.9; }
 
         .custom-card .social-links {
             display: flex;
@@ -133,7 +131,7 @@
             display: block;
         }
 
-        /* CARD HELOISA */
+        /* HELOISA */
         .card-heloisa .avatar-box { background: #f3e5f5; color: #8e44ad; }
         .card-heloisa .badge-verified { background: #e8f5e9; color: #2e7d32; }
         .card-heloisa .card-subtitle { color: #8e44ad; }
@@ -147,7 +145,7 @@
         .card-heloisa .social-links a.in { background: #0a66c2; }
         .card-heloisa .btn-register { border-color: #8e44ad; color: #8e44ad; }
 
-        /* CARD JOÃO */
+        /* JOÃO */
         .card-joao .avatar-box { background: #e6f0fa; color: #0066cc; }
         .card-joao .badge-verified { background: #e3f2fd; color: #0288d1; }
         .card-joao .card-subtitle { color: #0066cc; }
@@ -161,8 +159,407 @@
         .card-joao .social-links a.in { background: #0a66c2; }
         .card-joao .btn-register { border-color: #0066cc; color: #0066cc; }
 
-        .site-footer {
+        /* Estilo da Seção do Programa de Indicação */
+        .affiliate-section {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px 20px;
+            max-width: 850px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .affiliate-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-around;
+            margin: 20px 0;
             text-align: center;
-            padding: 20px;
-            font-size: 0.
-      
+        }
+
+        .metric-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .metric-box .metric-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #10b981;
+        }
+
+        .metric-box .metric-label {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .affiliate-link-box {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .affiliate-link-box input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .affiliate-link-box button {
+            padding: 10px 18px;
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Rodapé Completo */
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.88rem;
+            margin-top: 40px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .site-footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .site-footer p {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="app-mode">
+
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-ghost">Já tenho conta</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-content">
+
+        <section class="app-section">
+            <div class="section-header text-center">
+                <div class="app-chip">✨ Exemplos de Cartões Ativos</div>
+                <h2>Veja como fica o seu EBC</h2>
+                <p>Modelos de apresentação para perfis profissionais permanentes na web</p>
+            </div>
+
+            <div class="cards-grid-wrapper">
+
+                <div class="custom-card card-heloisa">
+                    <div class="avatar-box">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="badge-verified">
+                        <i class="fa-solid fa-circle-check"></i> Perfil Verificado EBC
+                    </div>
+                    <h3>HELOISA</h3>
+                    <div class="card-subtitle">Especialista em Conexões & Atendimentos</div>
+                    <p class="card-bio">
+                        Conectando negócios e garantindo que nenhum cliente perca o contato. Atendimento rápido e direto no WhatsApp.
+                    </p>
+                    <div class="card-actions">
+                        <a href="https://wa.me/5542999157587" target="_blank" class="btn-card-action btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> +55 42 99915-7587
+                        </a>
+                        <a href="mailto:maramwawaw@gmail.com" class="btn-card-action btn-email">
+                            <i class="fa-regular fa-envelope"></i> maramwawaw@gmail.com
+                        </a>
+                        <a href="https://www.siteheloisa.com.br" target="_blank" class="btn-card-action btn-site">
+                            <i class="fa-solid fa-globe"></i> Visitar Site Oficial
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="yt" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="in" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="#form-cadastro-ebc" class="btn-register">Criar Conta / Cadastrar</a>
+                </div>
+
+                <div class="custom-card card-joao">
+                    <div class="avatar-box">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <div class="badge-verified">
+                        <i class="fa-solid fa-shield-halved"></i> Mecânica Especializada
+                    </div>
+                    <h3>JOÃO</h3>
+                    <div class="card-subtitle">Especialista em Mecânica & Diagnósticos</div>
+                    <p class="card-bio">
+                        Manutenção preventiva, diagnóstico de motores, suspensão e injeção eletrônica com agilidade.
+                    </p>
+                    <div class="card-actions">
+                        <a href="https://wa.me/5542988887777" target="_blank" class="btn-card-action btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> (42) 98888-7777
+                        </a>
+                        <a href="mailto:joaomecanica@email.com" class="btn-card-action btn-email">
+                            <i class="fa-regular fa-envelope"></i> joaomecanica@email.com
+                        </a>
+                        <a href="https://www.joaomecanica.com.br" target="_blank" class="btn-card-action btn-site">
+                            <i class="fa-solid fa-globe"></i> Acesse o Site da Mecânica
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="fb" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="yt" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="in" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="#form-cadastro-ebc" class="btn-register">Criar Conta / Cadastrar</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="app-section">
+            <div class="section-header text-center">
+                <div class="app-chip">💎 Ativação Obrigatória do Card</div>
+                <h2>Escolha Seu Plano para Criar o EBC</h2>
+                <p>Selecione um dos planos abaixo para assinar e liberar a criação do seu cartão permanente.</p>
+            </div>
+
+            <div class="plans-container" style="margin-bottom: 30px;">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Plano Start</h3>
+                        <p class="plan-desc">Presença digital essencial e permanente.</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">19,90</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="plan-features" style="text-align: left; margin: 15px 0; font-size: 0.88rem; line-height: 1.8;">
+                        <li>✅ 1 Business Card Digital Unificado</li>
+                        <li>✅ QR Code Inteligente Indestrutível</li>
+                        <li>✅ Atualização de Dados em Tempo Real</li>
+                        <li>✅ Botão Direto de WhatsApp e E-mail</li>
+                        <li>✅ Proteção Total do Seu Histórico</li>
+                    </ul>
+                    <a href="https://invoice.infinitepay.io/plans/wanderer/W61VbRjWlc" target="_blank" class="btn btn-plan">
+                        ⚡ Assinar Plano Start
+                    </a>
+                </div>
+
+                <div class="plan-card featured">
+                    <div class="plan-badge">Mais Popular</div>
+                    <div class="plan-header">
+                        <h3>Business Pro</h3>
+                        <p class="plan-desc">Para empresas e marcas em escala.</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">49,90</span>
+                        <span class="period">/ano</span>
+                    </div>
+                    <ul class="plan-features" style="text-align: left; margin: 15px 0; font-size: 0.88rem; line-height: 1.8;">
+                        <li>✅ Tudo do Plano Start</li>
+                        <li>✅ Redes Sociais Completas (Insta, Face, LinkedIn)</li>
+                        <li>✅ Acesso ao Dashboard "Contato na Veia"</li>
+                        <li>✅ Rastreamento de Compartilhamento em Ilhas/Redes</li>
+                        <li>✅ Suporte Prioritário VIP</li>
+                    </ul>
+                    <a href="https://invoice.infinitepay.io/plans/wanderer/f2KK0STDxu" target="_blank" class="btn btn-plan btn-featured">
+                        ⚡ Assinar Business Pro
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 15px;">
+                <p style="font-weight: 600; font-size: 0.95rem;">Já concluiu o pagamento via InfinitePay?</p>
+                <a href="#form-cadastro-ebc" class="btn btn-ghost" style="margin-top: 5px; display: inline-block;">
+                    Criar Meu EBC Agora →
+                </a>
+            </div>
+        </section>
+
+        <section class="app-section">
+            <div class="affiliate-section">
+                <div class="section-header text-center" style="margin-bottom: 15px;">
+                    <div class="app-chip">💰 Ganhe Com Indicações</div>
+                    <h2>Programa de Indicação EBC</h2>
+                    <p>Ganhe <strong>R$ 2,00</strong> por cada novo usuário indicado que efetivar a assinatura do plano.</p>
+                </div>
+
+                <div class="affiliate-metrics">
+                    <div class="metric-box">
+                        <div class="metric-value" id="total-indicados">0</div>
+                        <div class="metric-label">Indicações Efetivadas</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value" id="saldo-acumulado">R$ 0,00</div>
+                        <div class="metric-label">Saldo de Comissões (R$ 2/cada)</div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 20px;">
+                    <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;">Seu Link Exclusivo de Indicador:</p>
+                    <div class="affiliate-link-box">
+                        <input type="text" id="input-link-indicador" value="https://meuebc.com/criar?ref=INDICADOR_ID" readonly>
+                        <button onclick="copiarLinkIndicacao()">Copiar Link</button>
+                    </div>
+                    <small id="msg-link-copiado" style="display:none; color: #10b981; font-weight: 600; margin-top: 5px;">Link copiado com sucesso!</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-section">
+            <div class="auth-wrapper" style="max-width: 500px;">
+                <div class="auth-card">
+                    <div class="auth-header text-center">
+                        <div class="app-chip">🔓 Passo 2: Liberação & Cadastro</div>
+                        <h2>Insira seu ID para Criar o EBC</h2>
+                        <p>Digite o ID de Ativação recebido após o pagamento para liberar sua página.</p>
+                    </div>
+
+                    <form id="form-cadastro-ebc" class="app-form" onsubmit="validarELiberarEBC(event)">
+                        <div id="auth-alert" class="form-alert" style="display: none;"></div>
+
+                        <div class="form-group">
+                            <label for="id-liberacao">ID de Liberação / Código de Ativação</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🔑</span>
+                                <input type="text" id="id-liberacao" placeholder="Ex: EBC-99915" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nome">Seu Nome / Nome da Empresa</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">👤</span>
+                                <input type="text" id="nome" placeholder="Ex: Heloisa" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Seu E-mail Principal</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">✉️</span>
+                                <input type="email" id="email" placeholder="maramwawaw@gmail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp Profissional</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📱</span>
+                                <input type="tel" id="whatsapp" placeholder="5542999157587" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Crie uma Senha de Acesso</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🔒</span>
+                                <input type="password" id="senha" placeholder="••••••••" minlength="6" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-app-primary btn-full">
+                            🚀 Validar ID e Criar Meu EBC
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Início</span>
+        </a>
+        <a href="planos.html" class="nav-item">
+            <span class="nav-icon">💎</span>
+            <span class="nav-label">Planos</span>
+        </a>
+        <a href="cadastro.html" class="nav-item active">
+            <span class="nav-icon">➕</span>
+            <span class="nav-label">Criar</span>
+        </a>
+        <a href="login.html" class="nav-item">
+            <span class="nav-icon">🔑</span>
+            <span class="nav-label">Entrar</span>
+        </a>
+    </div>
+
+    <footer class="site-footer">
+        <p>Expert Business Card - Todos os direitos reservados © 2026</p>
+        <p>Contato: <a href="mailto:maramwawaw@gmail.com">maramwawaw@gmail.com</a> | WhatsApp: <a href="https://wa.me/5542999157587" target="_blank">+55 42 99915-7587</a></p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #64748b;">Desenvolvido por MCWM 2026</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function copiarLinkIndicacao() {
+            const copyText = document.getElementById("input-link-indicador");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            
+            const msg = document.getElementById("msg-link-copiado");
+            msg.style.display = "block";
+            setTimeout(() => { msg.style.display = "none"; }, 2500);
+        }
+
+        function validarELiberarEBC(event) {
+            event.preventDefault();
+
+            const idLiberacao = document.getElementById('id-liberacao').value.trim();
+            const alertBox = document.getElementById('auth-alert');
+
+            if (!idLiberacao) {
+                alertBox.innerText = '❌ Por favor, informe o ID de Liberação do seu plano.';
+                alertBox.className = 'form-alert alert-error';
+                alertBox.style.display = 'block';
+                return;
+            }
+
+            const usuario = {
+                ebc_id: idLiberacao,
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                senha: document.getElementById('senha').value
+            };
+
+            localStorage.setItem('ebc_sessao_ativa', JSON.stringify(usuario));
+
+            alertBox.innerText = '✅ ID Validado! Redirecionando para o seu Dashboard...';
+            alertBox.className = 'form-alert alert-success';
+            alertBox.style.display = 'block';
+
+            setTimeout(() => {
+                window.location.href = 'dashboard.html';
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
+         
+        .
