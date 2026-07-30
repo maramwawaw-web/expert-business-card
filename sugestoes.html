@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sua Sugestão na Web | Expert Business Card</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .suggestion-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px 24px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .highlight-banner {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .highlight-banner h2 {
+            color: #38bdf8 !important;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .highlight-banner p {
+            color: #cbd5e1 !important;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .badge-star {
+            background: #f59e0b;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.88rem;
+            margin-top: 50px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .site-footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="app-mode">
+
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <div class="header-actions">
+                <a href="cadastro.html" class="btn btn-primary-glow">Criar Conta</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-content">
+        <div class="container" style="max-width: 850px; margin: 0 auto; padding: 20px 15px;">
+            
+            <div class="highlight-banner">
+                <div class="badge-star">🚀 Sua Contribuição é TOP Das Galáxias!</div>
+                <h2>Qual Dado ou Recurso Você Precisa Atualizar na Web?</h2>
+                <p>
+                    Quer ver seu negócio ainda mais forte e permanente na internet? Conte para a gente qual integração, botão ou atividade ajudaria seu cartão a ser ainda mais completo. Vamos analisar seu pedido e trabalhar para disponibilizá-lo!
+                </p>
+            </div>
+
+            <div class="suggestion-card">
+                <div class="auth-header text-center" style="margin-bottom: 20px;">
+                    <h3>💡 Fala pra gente a sua ideia</h3>
+                    <p style="font-size: 0.88rem; color: #64748b;">Preencha o formulário abaixo que nossa equipe entrará em contato.</p>
+                </div>
+
+                <form id="form-sugestao" class="app-form" onsubmit="enviarSugestao(event)">
+                    <div id="sugestao-alert" class="form-alert" style="display: none;"></div>
+
+                    <div class="form-group">
+                        <label for="sug-nome">Seu Nome / Nome da Empresa</
