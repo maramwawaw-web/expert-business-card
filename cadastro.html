@@ -8,225 +8,161 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/dashboard.css">
-</head>
-<body class="app-mode">
-
-    <header class="app-header">
-        <div class="header-container">
-            <a href="index.html" class="app-brand">
-                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
-            </a>
-            <div class="header-actions">
-                <a href="login.html" class="btn btn-ghost">Já tenho conta</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="app-content">
-
-        <section class="app-section">
-            <div class="section-header text-center">
-                <div class="app-chip">✨ Exemplo de Cartão Ativo</div>
-                <h2>Veja como fica o seu EBC</h2>
-                <p>Modelo de apresentação do seu perfil permanente na web</p>
-            </div>
-
-            <div class="public-card-wrapper" style="margin: 0 auto 30px auto;">
-                <div class="public-card">
-                    
-                    <div class="card-avatar-box">
-                        <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius: 50%; background: #122c40; padding: 4px; border: 2px solid var(--primary-bright);">
-                            <circle cx="50" cy="50" r="48" fill="#1e3a50"/>
-                            <path d="M25 45C25 28 35 15 50 15C65 15 75 28 75 45C75 58 72 70 70 75C65 65 65 50 65 50C65 50 58 55 50 55C42 55 35 50 35 50C35 50 35 65 30 75C28 70 25 58 25 45Z" fill="#38ef7d"/>
-                            <circle cx="50" cy="42" r="18" fill="#f8fafc"/>
-                            <circle cx="43" cy="40" r="2" fill="#07151f"/>
-                            <circle cx="57" cy="40" r="2" fill="#07151f"/>
-                            <path d="M44 48Q50 53 56 48" stroke="#07151f" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M28 85C28 70 38 65 50 65C62 65 72 70 72 85V90H28V85Z" fill="#18a558"/>
-                        </svg>
-                    </div>
-
-                    <div class="card-identity text-center">
-                        <h1>HELOISA</h1>
-                        <p class="public-title">Especialista em Conexões & Atendimentos</p>
-                        <div class="ebc-verified-badge">✓ Perfil Verificado EBC</div>
-                    </div>
-
-                    <p class="public-bio text-center">
-                        Conectando negócios e garantindo que nenhum cliente perca o contato. Atendimento rápido e direto no WhatsApp.
-                    </p>
-
-                    <div class="card-actions-list">
-                        <a href="https://wa.me/5542999157587" target="_blank" class="card-btn btn-whatsapp">
-                            📱 WhatsApp: +55 42 99915-7587
-                        </a>
-                        <a href="mailto:maramwawaw@gmail.com" class="card-btn btn-email">
-                            ✉️ maramwawaw@gmail.com
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="app-section">
-            <div class="section-header text-center">
-                <div class="app-chip">💎 Passo 1: Assine Seu Plano</div>
-                <h2>Escolha seu Plano para Liberar a Criação</h2>
-                <p>Após a confirmação da assinatura, utilize o ID gerado para liberar seu cadastro.</p>
-            </div>
-
-            <div class="plans-container" style="margin-bottom: 30px;">
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Plano Start</h3>
-                        <p class="plan-desc">Essencial para proteção do seu contato.</p>
-                    </div>
-                    <div class="plan-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">19,90</span>
-                        <span class="period">/mês</span>
-                    </div>
-                    <a href="https://invoice.infinitepay.io/plans/wanderer/W61VbRjWlc" target="_blank" class="btn btn-plan">
-                        ⚡ Assinar Plano Start
-                    </a>
-                </div>
-
-                <div class="plan-card featured">
-                    <div class="plan-badge">Recomendado</div>
-                    <div class="plan-header">
-                        <h3>Business Pro</h3>
-                        <p class="plan-desc">Completo com Dashboard e Métricas.</p>
-                    </div>
-                    <div class="plan-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">49,90</span>
-                        <span class="period">/ano</span>
-                    </div>
-                    <a href="https://invoice.infinitepay.io/plans/wanderer/f2KK0STDxu" target="_blank" class="btn btn-plan btn-featured">
-                        ⚡ Assinar Business Pro
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="app-section">
-            <div class="auth-wrapper" style="max-width: 500px;">
-                <div class="auth-card">
-                    <div class="auth-header text-center">
-                        <div class="app-chip">🔓 Passo 2: Liberação & Cadastro</div>
-                        <h2>Insira seu ID para Criar o EBC</h2>
-                        <p>Digite o ID de Ativação recebido após o pagamento para liberar sua página.</p>
-                    </div>
-
-                    <form id="form-cadastro-ebc" class="app-form" onsubmit="validarELiberarEBC(event)">
-                        
-                        <div id="auth-alert" class="form-alert" style="display: none;"></div>
-
-                        <div class="form-group">
-                            <label for="id-liberacao">ID de Liberação / Código de Ativação</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon">🔑</span>
-                                <input type="text" id="id-liberacao" placeholder="Ex: EBC-99915" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nome">Seu Nome / Nome da Empresa</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon">👤</span>
-                                <input type="text" id="nome" placeholder="Ex: Heloisa" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Seu E-mail Principal</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon">✉️</span>
-                                <input type="email" id="email" placeholder="maramwawaw@gmail.com" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="whatsapp">WhatsApp Profissional</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon">📱</span>
-                                <input type="tel" id="whatsapp" placeholder="5542999157587" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="senha">Crie uma Senha de Acesso</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon">🔒</span>
-                                <input type="password" id="senha" placeholder="••••••••" minlength="6" required>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-app-primary btn-full">
-                            🚀 Validar ID e Criar Meu EBC
-                        </button>
-
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div class="mobile-bottom-nav">
-        <a href="index.html" class="nav-item">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">Início</span>
-        </a>
-        <a href="planos.html" class="nav-item">
-            <span class="nav-icon">💎</span>
-            <span class="nav-label">Planos</span>
-        </a>
-        <a href="cadastro.html" class="nav-item active">
-            <span class="nav-icon">➕</span>
-            <span class="nav-label">Criar</span>
-        </a>
-        <a href="login.html" class="nav-item">
-            <span class="nav-icon">🔑</span>
-            <span class="nav-label">Entrar</span>
-        </a>
-    </div>
-
-    <script src="app.js"></script>
-    <script>
-        function validarELiberarEBC(event) {
-            event.preventDefault();
-
-            const idLiberacao = document.getElementById('id-liberacao').value.trim();
-            const alertBox = document.getElementById('auth-alert');
-
-            // Validação simples do ID de Liberação
-            if (!idLiberacao) {
-                alertBox.innerText = '❌ Por favor, informe o ID de Liberação do seu plano.';
-                alertBox.className = 'form-alert alert-error';
-                alertBox.style.display = 'block';
-                return;
-            }
-
-            const usuario = {
-                ebc_id: idLiberacao,
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                whatsapp: document.getElementById('whatsapp').value,
-                senha: document.getElementById('senha').value
-            };
-
-            // Salva a sessão do usuário
-            localStorage.setItem('ebc_sessao_ativa', JSON.stringify(usuario));
-
-            alertBox.innerText = '✅ ID Validado! Redirecionando para o seu Dashboard...';
-            alertBox.className = 'form-alert alert-success';
-            alertBox.style.display = 'block';
-
-            setTimeout(() => {
-                window.location.href = 'dashboard.html';
-            }, 1200);
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Ajustes específicos para a grade de cartões */
+        .cards-grid-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 850px;
+            margin: 0 auto 30px auto;
+            width: 100%;
         }
-    </script>
-</body>
-</html>
+
+        .custom-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            flex: 1;
+            min-width: 290px;
+            max-width: 380px;
+            padding: 24px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .custom-card .avatar-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .custom-card .badge-verified {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .custom-card h3 {
+            font-size: 1.35rem;
+            color: #1e293b;
+            margin-bottom: 2px;
+        }
+
+        .custom-card .card-subtitle {
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .custom-card .card-bio {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .custom-card .card-actions {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .custom-card .btn-card-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: opacity 0.2s;
+        }
+
+        .custom-card .btn-card-action:hover {
+            opacity: 0.9;
+        }
+
+        .custom-card .social-links {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .custom-card .social-links a {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .custom-card .btn-register {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* CARD HELOISA */
+        .card-heloisa .avatar-box { background: #f3e5f5; color: #8e44ad; }
+        .card-heloisa .badge-verified { background: #e8f5e9; color: #2e7d32; }
+        .card-heloisa .card-subtitle { color: #8e44ad; }
+        .card-heloisa .btn-whatsapp { background: #25d366; color: #fff; }
+        .card-heloisa .btn-email { background: #f1f5f9; color: #334155; }
+        .card-heloisa .btn-site { background: #8e44ad; color: #fff; }
+        .card-heloisa .social-links a { background: #2c3e50; }
+        .card-heloisa .social-links a.ig { background: #e1306c; }
+        .card-heloisa .social-links a.fb { background: #1877f2; }
+        .card-heloisa .social-links a.yt { background: #ff0000; }
+        .card-heloisa .social-links a.in { background: #0a66c2; }
+        .card-heloisa .btn-register { border-color: #8e44ad; color: #8e44ad; }
+
+        /* CARD JOÃO */
+        .card-joao .avatar-box { background: #e6f0fa; color: #0066cc; }
+        .card-joao .badge-verified { background: #e3f2fd; color: #0288d1; }
+        .card-joao .card-subtitle { color: #0066cc; }
+        .card-joao .btn-whatsapp { background: #25d366; color: #fff; }
+        .card-joao .btn-email { background: #f1f5f9; color: #334155; }
+        .card-joao .btn-site { background: #0066cc; color: #fff; }
+        .card-joao .social-links a { background: #0f2b48; }
+        .card-joao .social-links a.ig { background: #e1306c; }
+        .card-joao .social-links a.fb { background: #1877f2; }
+        .card-joao .social-links a.yt { background: #ff0000; }
+        .card-joao .social-links a.in { background: #0a66c2; }
+        .card-joao .btn-register { border-color: #0066cc; color: #0066cc; }
+
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.
+      
