@@ -159,72 +159,51 @@
         .card-joao .social-links a.in { background: #0a66c2; }
         .card-joao .btn-register { border-color: #0066cc; color: #0066cc; }
 
-        /* Estilo da Seção do Programa de Indicação */
-        .affiliate-section {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
+        /* SEÇÃO DE INDICAÇÃO COM ALTO CONTRASTE */
+        .affiliate-banner {
+            background: #0f172a;
+            border: 1px solid #1e293b;
             border-radius: 16px;
             padding: 30px 20px;
             max-width: 850px;
             margin: 0 auto 40px auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        .affiliate-metrics {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: space-around;
-            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            color: #ffffff;
             text-align: center;
         }
 
-        .metric-box {
-            background: #f8fafc;
-            border: 1px solid #cbd5e1;
-            border-radius: 12px;
-            padding: 15px;
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .metric-box .metric-value {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #10b981;
-        }
-
-        .metric-box .metric-label {
+        .affiliate-badge {
+            background: #059669;
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 0.85rem;
-            color: #64748b;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 12px;
         }
 
-        .affiliate-link-box {
-            display: flex;
-            gap: 10px;
-            max-width: 600px;
-            margin: 0 auto;
+        .affiliate-banner h2 {
+            color: #ffffff !important;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
         }
 
-        .affiliate-link-box input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            font-size: 0.9rem;
+        .affiliate-banner p {
+            color: #cbd5e1 !important;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
-        .affiliate-link-box button {
-            padding: 10px 18px;
-            background: #2563eb;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
+        .affiliate-share-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
         }
 
-        /* Rodapé Completo */
+        /* Rodapé */
         .site-footer {
             background: #0f172a;
             color: #94a3b8;
@@ -399,78 +378,36 @@
         </section>
 
         <section class="app-section">
-            <div class="affiliate-section">
-                <div class="section-header text-center" style="margin-bottom: 15px;">
-                    <div class="app-chip">💰 Ganhe Com Indicações</div>
-                    <h2>Programa de Indicação EBC</h2>
-                    <p>Ganhe <strong>R$ 2,00</strong> por cada novo usuário indicado que efetivar a assinatura do plano.</p>
-                </div>
-              <section class="app-section">
-    <div class="affiliate-section" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px 20px; max-width: 850px; margin: 0 auto 40px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-        <div class="section-header text-center" style="margin-bottom: 15px;">
-            <div class="app-chip">💰 Ganhe Com Indicações</div>
-            <h2>Programa de Indicação EBC</h2>
-            <p>Ganhe <strong>R$ 2,00</strong> por cada novo usuário indicado que efetivar a assinatura do plano.</p>
-        </div>
+            <div class="affiliate-banner">
+                <div class="affiliate-badge">💰 Ganhe Com Indicações</div>
+                <h2>Programa de Indicação EBC</h2>
+                <p>Ganhe <strong style="color: #34d399;">R$ 2,00</strong> por cada novo usuário indicado que efetivar a assinatura do plano.</p>
 
-        <div class="affiliate-metrics" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-around; margin: 20px 0; text-align: center;">
-            <div class="metric-box" style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 15px; flex: 1; min-width: 200px;">
-                <div class="metric-value" id="total-indicados" style="font-size: 1.6rem; font-weight: 800; color: #10b981;">0</div>
-                <div class="metric-label" style="font-size: 0.85rem; color: #64748b;">Indicações Efetivadas</div>
-            </div>
-            <div class="metric-box" style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 15px; flex: 1; min-width: 200px;">
-                <div class="metric-value" id="saldo-acumulado" style="font-size: 1.6rem; font-weight: 800; color: #10b981;">R$ 0,00</div>
-                <div class="metric-label" style="font-size: 0.85rem; color: #64748b;">Saldo de Comissões (R$ 2/cada)</div>
-            </div>
-        </div>
-
-        <div class="text-center" style="margin-top: 20px;">
-            <p style="font-size: 0.88rem; color: #475569; margin-bottom: 10px;">Seu Link Exclusivo de Indicador:</p>
-            
-            <div style="display: flex; gap: 10px; max-width: 600px; margin: 0 auto 15px auto; flex-wrap: wrap;">
-                <input type="text" id="input-link-indicador" value="https://expert-business-card.vercel.app/?ref=INDICADOR_ID" readonly style="flex: 1; min-width: 240px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.9rem;">
-                <a href="https://expert-business-card.vercel.app/?ref=INDICADOR_ID" target="_blank" class="btn" style="padding: 10px 18px; background: #2563eb; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-                    🔗 Acessar Este Link
-                </a>
-            </div>
-
-            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">Compartilhar nas Redes Sociais:</p>
-            <div class="share-buttons" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-                <a href="https://api.whatsapp.com/send?text=Crie%20seu%20cart%C3%A3o%20de%20visitas%20digital%20permanente%20no%20EBC:%20https://expert-business-card.vercel.app/?ref=INDICADOR_ID" target="_blank" style="background: #25d366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://expert-business-card.vercel.app/?ref=INDICADOR_ID" target="_blank" style="background: #1877f2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
-                    <i class="fa-brands fa-facebook"></i> Facebook
-                </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://expert-business-card.vercel.app/?ref=INDICADOR_ID" target="_blank" style="background: #0a66c2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://www.youtube.com" target="_blank" style="background: #ff0000; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
-                    <i class="fa-brands fa-youtube"></i> YouTube
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-                <div class="affiliate-metrics">
-                    <div class="metric-box">
-                        <div class="metric-value" id="total-indicados">0</div>
-                        <div class="metric-label">Indicações Efetivadas</div>
+                <div class="affiliate-share-box">
+                    <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 12px;">Link Oficial para Compartilhamento:</p>
+                    
+                    <div style="display: flex; gap: 10px; max-width: 600px; margin: 0 auto 15px auto; flex-wrap: wrap;">
+                        <input type="text" id="input-link-indicador" value="https://expert-business-card.vercel.app/" readonly style="flex: 1; min-width: 240px; padding: 10px; border: 1px solid #475569; border-radius: 8px; font-size: 0.9rem; background: #0f172a; color: #38bdf8; font-weight: 600;">
+                        <a href="https://expert-business-card.vercel.app/" target="_blank" class="btn" style="padding: 10px 18px; background: #2563eb; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                            🔗 Acessar Este Link
+                        </a>
                     </div>
-                    <div class="metric-box">
-                        <div class="metric-value" id="saldo-acumulado">R$ 0,00</div>
-                        <div class="metric-label">Saldo de Comissões (R$ 2/cada)</div>
-                    </div>
-                </div>
 
-                <div class="text-center" style="margin-top: 20px;">
-                    <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;">Seu Link Exclusivo de Indicador:</p>
-                    <div class="affiliate-link-box">
-                        <input type="text" id="input-link-indicador" value="https://meuebc.com/criar?ref=INDICADOR_ID" readonly>
-                        <button onclick="copiarLinkIndicacao()">Copiar Link</button>
+                    <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 10px;">Compartilhar nas Redes Sociais:</p>
+                    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                        <a href="https://api.whatsapp.com/send?text=Crie%20seu%20cart%C3%A3o%20de%20visitas%20digital%20permanente%20no%20EBC:%20https://expert-business-card.vercel.app/" target="_blank" style="background: #25d366; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://expert-business-card.vercel.app/" target="_blank" style="background: #1877f2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://expert-business-card.vercel.app/" target="_blank" style="background: #0a66c2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" style="background: #ff0000; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-brands fa-youtube"></i> YouTube
+                        </a>
                     </div>
-                    <small id="msg-link-copiado" style="display:none; color: #10b981; font-weight: 600; margin-top: 5px;">Link copiado com sucesso!</small>
                 </div>
             </div>
         </section>
@@ -563,17 +500,6 @@
 
     <script src="app.js"></script>
     <script>
-        function copiarLinkIndicacao() {
-            const copyText = document.getElementById("input-link-indicador");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
-            
-            const msg = document.getElementById("msg-link-copiado");
-            msg.style.display = "block";
-            setTimeout(() => { msg.style.display = "none"; }, 2500);
-        }
-
         function validarELiberarEBC(event) {
             event.preventDefault();
 
@@ -608,5 +534,3 @@
     </script>
 </body>
 </html>
-         
-        .
