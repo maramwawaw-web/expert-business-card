@@ -7,6 +7,63 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Grade para os 2 Cards de Login */
+        .login-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .login-grid .auth-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 420px;
+            margin: 0;
+        }
+
+        .card-indicador {
+            border-top: 4px solid #10b981 !important;
+        }
+
+        .chip-indicador {
+            background: rgba(16, 185, 129, 0.1) !important;
+            color: #10b981 !important;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .btn-indicador {
+            background: #10b981 !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .btn-indicador:hover {
+            background: #059669 !important;
+        }
+
+        /* Rodapé */
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.88rem;
+            margin-top: 50px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .site-footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body class="app-mode">
 
@@ -22,17 +79,22 @@
     </header>
 
     <main class="app-content">
-        <div class="auth-wrapper">
+        <div class="section-header text-center" style="margin-bottom: 30px;">
+            <h2>Escolha Seu Tipo de Acesso</h2>
+            <p>Acesse o painel do seu Cartão Digital ou gerencie suas Comissões de Indicador</p>
+        </div>
+
+        <div class="login-grid">
+            
             <div class="auth-card">
                 <div class="auth-header text-center">
-                    <div class="app-chip">🔑 Área do Cliente</div>
-                    <h2>Acessar Seu Dashboard</h2>
+                    <div class="app-chip">🔑 Área do Cliente EBC</div>
+                    <h2>Painel do Cartão</h2>
                     <p>Gerencie seus dados e atualize seu QR Code em tempo real.</p>
                 </div>
 
-                <form id="form-login" class="app-form" onsubmit="realizarLogin(event)">
-                    
-                    <div id="login-alert" class="form-alert" style="display: none;"></div>
+                <form id="form-login-cliente" class="app-form" onsubmit="realizarLoginCliente(event)">
+                    <div id="login-alert-cliente" class="form-alert" style="display: none;"></div>
 
                     <div class="form-group">
                         <label for="login-email">E-mail Cadastrado</label>
@@ -51,15 +113,51 @@
                     </div>
 
                     <button type="submit" class="btn btn-app-primary btn-full">
-                        Entrar no Painel
+                        🚀 Entrar no Meu EBC
                     </button>
-
                 </form>
 
                 <div class="auth-footer text-center">
-                    <p>Ainda não tem um Business Card? <a href="cadastro.html" class="link-highlight">Cadastre-se aqui</a></p>
+                    <p>Ainda não tem um EBC? <a href="cadastro.html" class="link-highlight">Criar agora</a></p>
                 </div>
             </div>
+
+            <div class="auth-card card-indicador">
+                <div class="auth-header text-center">
+                    <div class="app-chip chip-indicador">💰 Área do Indicador</div>
+                    <h2>Painel de Comissões</h2>
+                    <p>Acompanhe suas indicações ativas e solicite o resgate via Pix.</p>
+                </div>
+
+                <form id="form-login-indicador" class="app-form" onsubmit="realizarLoginIndicador(event)">
+                    <div id="login-alert-indicador" class="form-alert" style="display: none;"></div>
+
+                    <div class="form-group">
+                        <label for="ind-login-email">E-mail do Indicador</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉️</span>
+                            <input type="email" id="ind-login-email" placeholder="seuemail@dominio.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ind-login-senha">Senha ou Chave Pix</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔑</span>
+                            <input type="password" id="ind-login-senha" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-indicador btn-full">
+                        💵 Entrar no Painel de Indicações
+                    </button>
+                </form>
+
+                <div class="auth-footer text-center">
+                    <p>Quer ser um indicador? <a href="painel-indicador.html" class="link-highlight" style="color:#10b981;">Cadastre-se aqui</a></p>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -82,7 +180,5 @@
         </a>
     </div>
 
-    <script src="app.js"></script>
-    <script src="js/auth.js"></script>
-</body>
-</html>
+    <footer class="site-footer">
+        <p>Expert Business Card - Todos os direitos reservados © 2026</p>
