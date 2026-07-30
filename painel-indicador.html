@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Indicador | EBC</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .admin-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .share-btn {
+            padding: 10px 16px;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .share-wa { background-color: #25d366; }
+        .share-fb { background-color: #1877f2; }
+        .share-in { background-color: #0a66c2; }
+        .share-yt { background-color: #ff0000; }
+
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.88rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body class="app-mode">
+
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="app-brand">
+                <img src="logo-ebc.svg" alt="EBC Logo" class="brand-logo">
+            </a>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-ghost">Entrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-content">
+
+        <section class="app-section">
+            <div class="section-header text-center">
+                <div class="app-chip">💎 Programa de Afiliados</div>
+                <h2>Painel do Indicador EBC</h2>
+                <p>Abra sua conta de indicador e ganhe R$ 2,00 por cada indicação convertida.</p>
+            </div>
+        </section>
+
+        <section class="app-section" id="sec-cadastro-indicador">
+            <div class="auth-wrapper" style="max-width: 500px;">
+                <div class="auth-card">
+                    <div class="auth-header text-center">
+                        <h2>👤 Criar Conta de Indicador</h2>
+                        <p>Preencha os dados abaixo para gerar seu link exclusivo</p>
+                    </div>
+
+                    <form class="app-form" onsubmit="criarContaIndicador(event)">
+                        <div class="form-group">
+                            <label>Seu Nome Completo</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">👤</span>
+                                <input type="text" id="ind-nome" placeholder="Ex: Carlos Silva" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Seu E-mail Principal</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">✉️</span>
+                                <input type="email" id="ind-email" placeholder="seuemail@gmail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Chave Pix para Recebimento</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🔑</span>
+                                <input type="text" id="ind-pix" placeholder="CPF, E-mail ou Telefone" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-app-primary btn-full">
+                            🚀 Abrir Minha Conta e Gerar Link
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-section" id="sec-painel-indicador" style="display: none;">
+            <div class="admin-box">
+                <div class="text-center" style="margin-bottom: 25px;">
+                    <h3>Bem-vindo(a), <span id="dash-nome-indicador">Indicador</span>!</h3>
+                    <p style="color: #64748b; font-size: 0.9rem;">Acompanhe aqui seus ganhos e compartilhe seu link exclusivo.</p>
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+                    <div style="flex: 1; min-width: 200px; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 12px; text-align: center;">
+                        <span style="font-size: 0.85rem; color: #166534; font-weight: bold;">INDICAÇÕES EFETIVADAS</span>
+                        <h2 style="color: #15803d; margin-top: 5px;" id="dash-qtd-indicados">0</h2>
+                    </div>
+
+                    <div style="flex: 1; min-width: 200px; background: #eff6ff; border: 1px solid #bfdbfe; padding: 20px; border-radius: 12px; text-align: center;">
+                        <span style="font-size: 0.85rem; color: #1e40af; font-weight: bold;">SALDO A RECEBER (R$ 2,00/cada)</span>
+                        <h2 style="color: #1d4ed8; margin-top: 5px;" id="dash-saldo">R$ 0,00</h2>
+                    </div>
+                </div>
+
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 25px;">
+                    <label style="font-weight: bold; font-size: 0.9rem; color: #334155; display: block; margin-bottom: 8px;">
+                        🔗 Seu Link Exclusivo de Compartilhamento:
+                    </label>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <input type="text" id="dash-link-final" readonly style="flex: 1; min-width: 250px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.9rem;">
+                        <a id="btn-acessar-link" href="#" target="_blank" class="btn" style="background: #2563eb; color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                            🔗 Acessar Este Link
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p style="font-weight: bold; margin-bottom: 12px; color: #334155;">Compartilhar em um clique:</p>
+                    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                        <a id="share-wa-btn" href="#" target="_blank" class="share-btn share-wa">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a id="share-fb-btn" href="#" target="_blank" class="share-btn share-fb">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                        <a id="share-in-btn" href="#" target="_blank" class="share-btn share-in">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" class="share-btn share-yt">
+                            <i class="fa-brands fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Expert Business Card - Todos os direitos reservados © 2026</p>
+        <p>Contato: <a href="mailto:maramwawaw@gmail.com" style="color:#38bdf8;">maramwawaw@gmail.com</a> | WhatsApp: <a href="https://wa.me/5542999157587" target="_blank" style="color:#38bdf8;">+55 42 99915-7587</a></p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #64748b;">Desenvolvido por MCWM 2026</p>
+    </footer>
+
+    <script>
+        function criarContaIndicador(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('ind-nome').value;
+            const email = document.getElementById('ind-email').value;
+            const idUnico = 'IND-' + Math.floor(10000 + Math.random() * 90000);
+            
+            // URL Base solicitada
+            const urlBase = 'https://expert-business-card.vercel.app/?ref=' + idUnico;
+
+            // Atualiza tela do painel
+            document.getElementById('dash-nome-indicador').innerText = nome;
+            document.getElementById('dash-link-final').value = urlBase;
+            document.getElementById('btn-acessar-link').href = urlBase;
+
+            // Atualiza links das redes sociais
+            const msgWa = encodeURIComponent("Crie seu cartão profissional permanente no EBC: " + urlBase);
+            document.getElementById('share-wa-btn').href = "https://api.whatsapp.com/send?text=" + msgWa;
+            document.getElementById('share-fb-btn').href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(urlBase);
+            document.getElementById('share-in-btn').href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(urlBase);
+
+            // Troca as seções visíveis
+            document.getElementById('sec-cadastro-indicador').style.display = 'none';
+            document.getElementById('sec-painel-indicador').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
